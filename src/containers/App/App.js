@@ -14,8 +14,12 @@ class App extends Component {
             <h1 className="app-title">Welcome to Elder Flower</h1>
           </header>
           <main className="main-container">
-            <NavLink exact to="/login" className="nav-link nav-link-login" />
-            <NavLink exact to="/sign-up" className="nav-link nav-link-signup" />
+            <NavLink exact to="/login" className="nav-link nav-link-login">
+              Login
+            </NavLink>
+            <NavLink exact to="/sign-up" className="nav-link nav-link-signup">
+              Sign Up
+            </NavLink>
             <Routes />
           </main>
         </div>
