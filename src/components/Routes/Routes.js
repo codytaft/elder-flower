@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Login from '../../containers/Login/Login';
+import { Login } from '../../containers/Login/Login';
 import SignUp from '../../containers/SignUp/SignUp';
+import Emergency from '../../containers/Emergency/Emergency';
 
 export const Routes = () => {
   return (
@@ -18,8 +19,8 @@ export const Routes = () => {
           return <Emergency />;
         }}
       />
-      <Route exact path="/sign-up" component={Login} />
-      <Route exact path="/login" component={SignUp} />
+      <Route exact path="/sign-up" component={SignUp} />
+      <Route exact path="/login" component={Login} />
     </Switch>
   );
 };
