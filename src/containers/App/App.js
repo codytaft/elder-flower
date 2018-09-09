@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from '../../components/Routes/Routes';
 import { Route, NavLink } from 'react-router-dom';
+import { Header } from '../Header/Header';
 
 import './App.css';
 
@@ -16,6 +18,7 @@ class App extends Component {
       })
     });
     const result = await res.json();
+    console.log(result);
   }
   render() {
     return (
@@ -23,6 +26,7 @@ class App extends Component {
         <div className="app">
           <header className="app-header">
             <h1 className="app-title">Welcome to Elder Flower</h1>
+            <Header />
           </header>
           <main className="main-container">
             <NavLink exact to="/login" className="nav-link nav-link-login">
