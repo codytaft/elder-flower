@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Login } from '../../containers/Login/Login';
-import SignUp from '../../containers/SignUp/SignUp';
+import { SignUp } from '../../containers/SignUp/SignUp';
 import Emergency from '../../containers/Emergency/Emergency';
 
 export const Routes = () => {
