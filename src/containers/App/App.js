@@ -6,6 +6,17 @@ import { Route, NavLink } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
+  async componentDidMount() {
+    const res = await fetch(`http://localhost:3000/api/sendMessage`, {
+      method: 'POST',
+      body: JSON.stringify({
+        To: '+19038511575',
+        From: '+17203304593',
+        Body: 'hello'
+      })
+    });
+    const result = await res.json();
+  }
   render() {
     return (
       <Router>
