@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { createUser, setCurrentUser } from '../../actions/userActions';
+import {
+  createElder,
+  createCarer,
+  setCurrentUser
+} from '../../actions/userActions';
 
-export class SignUp extends Component {
+export class SignUpElder extends Component {
   constructor() {
     super();
     this.state = {
@@ -97,11 +101,12 @@ export class SignUp extends Component {
 }
 
 export const mapDispatchToProps = dispatch => ({
-  createUser: user => dispatch(createUser(user)),
+  createElder: user => dispatch(createElder(user)),
+  createCarer: user => dispatch(createCarer(user)),
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 
 export default connect(
   null,
   mapDispatchToProps
-)(SignUp);
+)(SignUpElder);

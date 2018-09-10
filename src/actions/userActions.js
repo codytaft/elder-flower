@@ -3,7 +3,12 @@ export const setCurrentUser = user => ({
   user
 });
 
-export const createUser = user => ({
-  type: 'CREATE_USER',
+export const createCarer = user => ({
+  type: 'CREATE_CARER',
+  user
+});
+
+export const createElder = user => ({
+  type: 'CREATE_ELDER',
   user
 });
