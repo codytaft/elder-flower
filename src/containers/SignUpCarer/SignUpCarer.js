@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { createElder, setCurrentUser } from '../../actions';
+import { createCarer, setCurrentUser } from '../../actions';
+import { withRouter } from 'react-router-dom';
 
-export class SignUpElder extends Component {
+export class SignUpCarer extends Component {
   constructor() {
     super();
     this.state = {
@@ -11,8 +12,8 @@ export class SignUpElder extends Component {
       lastName: '',
       phoneNumber: '',
       emailAddress: '',
-      carerName: '',
-      carerPhone: ''
+      elderName: '',
+      elderPhone: ''
     };
   }
 
@@ -31,13 +32,19 @@ export class SignUpElder extends Component {
       emergencyName,
       emergencyPhone
     } = this.state;
-    // this.props.createElder(this.state);
-    this.props.setCurrentUser({ firstName, lastName, phoneNumber });
+    // this.props.createCarer(this.state);
+    const currentUser = {
+      FirstName: firstName,
+      LastName: lastName,
+      PhoneNumber: phoneNumber
+    };
+
+    console.log(this.props.setCurrentUser);
+    this.props.setCurrentUser(currentUser);
   };
 
   testPhoneNumber = e => {
     e.preventDefault;
-    const testPhoneNumber = this.state.phoneNumber;
   };
 
   render() {
@@ -58,16 +65,6 @@ export class SignUpElder extends Component {
             name="lastName"
             placeholder="Last Name"
           />
-          <section className="signup-phone-section">
-            <input
-              onChange={this.handleChange}
-              className="signup-phoneNumber"
-              value={this.state.phoneNumber}
-              name="phoneNumber"
-              placeholder="Phone Number"
-            />
-            <button onClick={this.testPhoneNumber}>Test Phone</button>
-          </section>
 
           <input
             onChange={this.handleChange}
@@ -78,20 +75,30 @@ export class SignUpElder extends Component {
           />
           <input
             onChange={this.handleChange}
-            className="signup-carer-name"
-            value={this.state.emergencyName}
-            name="carerName"
-            placeHolder="Carer Contact Name"
+            className="signup-elder-name"
+            value={this.state.elderName}
+            name="elderName"
+            placeHolder="Elder Contact Name"
           />
           <input
             onChange={this.handleChange}
-            className="signup-carer-phone"
-            value={this.state.carerPhone}
-            name="carerPhone"
-            placeHolder="Carer Contact Phone"
+            className="signup-elder-phone"
+            value={this.state.elderPhone}
+            name="elderPhone"
+            placeHolder="Elder Contact Phone"
           />
           <button className="signup-submit-btn">Submit</button>
         </form>
+        <section className="signup-phone-section">
+          <input
+            onChange={this.handleChange}
+            className="signup-phoneNumber"
+            value={this.state.phoneNumber}
+            name="phoneNumber"
+            placeholder="Phone Number"
+          />
+          <button onClick={this.testPhoneNumber}>Test Phone</button>
+        </section>
       </section>
     );
   }
@@ -102,11 +109,13 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  createElder: user => dispatch(createElder(user)),
+  // createCarer: user => dispatch(createCarer(user)),
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SignUpElder);
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(SignUpCarer)
+);
