@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { setCurrentUser } from '../../actions';
+import './Login.css';
 
 export class Login extends Component {
   constructor() {
@@ -9,10 +12,24 @@ export class Login extends Component {
       password: ''
     };
   }
+
+  handleChange = e => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    const currentUser = this.state;
+    console.log(currentUser);
+    this.props.setCurrentUser(currentUser);
+  };
+
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <input
+          onChange={this.handleChange}
           type="text"
           className="login-email-input"
           value={this.state.email}
@@ -20,6 +37,7 @@ export class Login extends Component {
           placeholder="Email Address"
         />
         <input
+          onChange={this.handleChange}
           type="text"
           className="login-password-input"
           value={this.state.password}
@@ -31,3 +49,16 @@ export class Login extends Component {
     );
   }
 }
+
+export const mapStateToProps = state => ({
+  currentUser: state.currentUser
+});
+
+export const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Login);

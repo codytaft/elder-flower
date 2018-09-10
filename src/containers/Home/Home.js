@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Navigation from '../Navigation/Navigation';
+import { Navigation } from '../Navigation/Navigation';
 import MainContainer from '../MainContainer/MainContainer';
 
 export class Home extends Component {

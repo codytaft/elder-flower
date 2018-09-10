@@ -1,7 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Login } from '../../containers/Login/Login';
-import { SignUp } from '../../containers/SignUp/SignUp';
+import { SignUpHome } from '../../components/SignUpHome/SignUpHome';
+import SignUpElder from '../../containers/SignUpElder/SignUpElder';
+import SignUpCarer from '../../containers/SignUpCarer/SignUpCarer';
 import Emergency from '../../containers/Emergency/Emergency';
 
 export const Routes = () => {
@@ -9,9 +11,10 @@ export const Routes = () => {
     <Switch>
       <Route exact path="/" />
       <Route exact path="/home" />
-      <Route exact path="/groups" />
-      <Route exact path="/new-group" />
-      <Route exact path="/group-setup" />
+      <Route exact path="/login" component={Login} />
+      <Route exact path="/sign-up-home" component={SignUpHome} />
+      <Route exact path="/sign-up-elder" component={SignUpElder} />
+      <Route exact path="/sign-up-carer" component={SignUpCarer} />
       <Route
         exact
         path="/emergency"
@@ -19,8 +22,6 @@ export const Routes = () => {
           return <Emergency />;
         }}
       />
-      <Route exact path="/sign-up" component={SignUp} />
-      <Route exact path="/login" component={Login} />
     </Switch>
   );
 };
