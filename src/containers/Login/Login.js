@@ -9,10 +9,17 @@ export class Login extends Component {
       password: ''
     };
   }
+
+  handleChange = e => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  };
+
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <input
+          onChange={this.handleChange}
           type="text"
           className="login-email-input"
           value={this.state.email}
@@ -20,6 +27,7 @@ export class Login extends Component {
           placeholder="Email Address"
         />
         <input
+          onChange={this.handleChange}
           type="text"
           className="login-password-input"
           value={this.state.password}

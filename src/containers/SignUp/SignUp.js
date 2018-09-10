@@ -7,15 +7,28 @@ export class SignUp extends Component {
     this.state = {
       firstName: '',
       lastName: '',
-      phoneNumbe: '',
+      phoneNumber: '',
       emailAddress: '',
       emergencyName: '',
       emergencyPhone: ''
     };
   }
 
+  handleChange = e => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  };
+
   handleSubmit = e => {
     e.preventDefault();
+    const {
+      firstName,
+      lastName,
+      phoneNumber,
+      emailAddress,
+      emergencyName,
+      emergencyPhone
+    } = this.state;
   };
 
   render() {
@@ -26,19 +39,19 @@ export class SignUp extends Component {
             className="signup-first-name"
             value={this.state.firstName}
             name="firstName"
-            placeHolder="First Name"
+            placeholder="First Name"
           />
           <input
             className="signup-last-name"
             value={this.state.lastName}
             name="lastName"
-            placeHolder="Last Name"
+            placeholder="Last Name"
           />
           <input
             className="signup-phoneNumber"
             value={this.state.phoneNumber}
             name="phoneNumber"
-            placeHolder="Phone Number"
+            placeholder="Phone Number"
           />
           <input
             className="signup-email-address"
