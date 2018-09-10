@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Login } from '../../containers/Login/Login';
+import Login from '../../containers/Login/Login';
 import { SignUpHome } from '../../components/SignUpHome/SignUpHome';
 import SignUpElder from '../../containers/SignUpElder/SignUpElder';
 import SignUpCarer from '../../containers/SignUpCarer/SignUpCarer';
