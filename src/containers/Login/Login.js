@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { setCurrentUser } from '../../actions/userActions';
+import { setCurrentUser } from '../../actions';
 import './Login.css';
 
 export class Login extends Component {
@@ -21,7 +21,7 @@ export class Login extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const currentUser = this.state;
-    console.log(this.state);
+    console.log(currentUser);
     this.props.setCurrentUser(currentUser);
   };
 
