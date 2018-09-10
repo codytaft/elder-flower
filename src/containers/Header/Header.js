@@ -7,12 +7,15 @@ export class Header extends Component {
   render() {
     return (
       <section className="main-header">
+        <h1>Welcome to Elder Flower</h1>
         <Link
           exact
           to="/"
           className="nav-link nav-link-logout"
-          onCLick={this.logoutUser}
-        />
+          onClick={this.logoutUser}
+        >
+          Logout
+        </Link>
       </section>
     );
   }

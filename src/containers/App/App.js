@@ -25,7 +25,6 @@ class App extends Component {
       <Router>
         <div className="app">
           <header className="app-header">
-            <h1 className="app-title">Welcome to Elder Flower</h1>
             <Header />
           </header>
           <main className="main-container">
