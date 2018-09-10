@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { setCurrentUser } from '../../actions/userActions';
+import './Login.css';
 
 export class Login extends Component {
   constructor() {
@@ -13,6 +16,13 @@ export class Login extends Component {
   handleChange = e => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    const currentUser = this.state;
+    console.log(this.state);
+    this.props.setCurrentUser(currentUser);
   };
 
   render() {
@@ -39,3 +49,16 @@ export class Login extends Component {
     );
   }
 }
+
+export const mapStateToProps = state => ({
+  currentUser: state.currentUser
+});
+
+export const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Login);
