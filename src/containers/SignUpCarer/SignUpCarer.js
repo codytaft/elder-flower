@@ -24,24 +24,19 @@ export class SignUpCarer extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const {
-      firstName,
-      lastName,
-      phoneNumber,
-      emailAddress,
-      emergencyName,
-      emergencyPhone
-    } = this.state;
-    // this.props.createCarer(this.state);
-    const currentUser = {
-      FirstName: firstName,
-      LastName: lastName,
-      PhoneNumber: phoneNumber
-    };
-
-    console.log(this.props.setCurrentUser);
-    this.props.setCurrentUser(currentUser);
+    this.props.createCarer(this.state);
+    // setCurrentUser();
   };
+
+  // setCurrentUser = () => {
+  //   const { firstName, lastName, phoneNumber } = this.state;
+  //   const currentUser = {
+  //     FirstName: firstName,
+  //     LastName: lastName,
+  //     PhoneNumber: phoneNumber
+  //   };
+  //   this.props.setCurrentUser(currentUser);
+  // };
 
   testPhoneNumber = e => {
     e.preventDefault;
@@ -105,11 +100,12 @@ export class SignUpCarer extends Component {
 }
 
 export const mapStateToProps = state => ({
-  currentUser: state.currentUser
+  currentUser: state.currentUser,
+  carers: state.carers
 });
 
 export const mapDispatchToProps = dispatch => ({
-  // createCarer: user => dispatch(createCarer(user)),
+  createCarer: user => dispatch(createCarer(user)),
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createElder, setCurrentUser } from '../../actions';
+import { withRouter } from 'react-router-dom';
 
 export class SignUpElder extends Component {
   constructor() {
@@ -31,8 +32,7 @@ export class SignUpElder extends Component {
       emergencyName,
       emergencyPhone
     } = this.state;
-    // this.props.createElder(this.state);
-    this.props.setCurrentUser({ firstName, lastName, phoneNumber });
+    this.props.setCurrentUser(this.state);
   };
 
   testPhoneNumber = e => {
@@ -106,7 +106,9 @@ export const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SignUpElder);
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(SignUpElder)
+);
