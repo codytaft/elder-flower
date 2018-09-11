@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createCarer, setCurrentUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
-import { UserInstance } from 'twilio/lib/rest/chat/v2/service/user';
 
 export class SignUpCarer extends Component {
   constructor() {

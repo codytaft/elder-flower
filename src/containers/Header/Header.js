@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { setCurrentUser } from '../../actions';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 export class Header extends Component {
-  logoutUser = () => {};
+  logoutUser = () => {
+    this.props.setCurrentUser(null);
+    this.props.history.replace('/');
+  };
   render() {
     return (
       <section className="main-header">
@@ -20,3 +26,14 @@ export class Header extends Component {
     );
   }
 }
+
+export const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+});
+
+export default withRouter(
+  connect(
+    null,
+    mapDispatchToProps
+  )(Header)
+);
