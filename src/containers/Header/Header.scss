@@ -1,0 +1,20 @@
+.main-header-section {
+  display: inline;
+}
+
+.main-header-title {
+  text-align: center;
+  // display: flex;
+  width: 100%;
+  // margin: 0;
+}
+
+.nav-link-logout {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.nav-link-logout-hidden {
+  display: none;
+}
