@@ -8,3 +8,10 @@
 .signup-phone-section {
   display: flex;
   width: 15rem; }
+
+.signup-submit-btn {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  width: 5rem; }
