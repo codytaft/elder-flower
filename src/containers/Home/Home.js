@@ -13,7 +13,7 @@ export class Home extends Component {
     return (
       <section>
         <Header />
-        <Navigation />
+        {/* <Navigation /> */}
         <MainContainer />
       </section>
     );

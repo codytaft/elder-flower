@@ -27,7 +27,7 @@ export class Login extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className="login-form">
         <input
           onChange={this.handleChange}
           type="text"
