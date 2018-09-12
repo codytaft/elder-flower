@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { createCarer, setCurrentUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
 
+import './SignUpCarer.css';
+
 export class SignUpCarer extends Component {
   constructor() {
     super();

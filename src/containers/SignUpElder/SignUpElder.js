@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { createElder, setCurrentUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
 
+import './SignUpElder.css';
 export class SignUpElder extends Component {
   constructor() {
     super();
@@ -66,7 +67,9 @@ export class SignUpElder extends Component {
               name="phoneNumber"
               placeholder="Phone Number"
             />
-            <button onClick={this.testPhoneNumber}>Test Phone</button>
+            <button onClick={this.testPhoneNumber} className="phone-test-btn">
+              Test Phone
+            </button>
           </section>
 
           <input
