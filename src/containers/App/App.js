@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from '../../components/Routes/Routes';
 import { Route, NavLink } from 'react-router-dom';
-import { Header } from '../Header/Header';
+import Header from '../Header/Header';
 import { MainContainer } from '../MainContainer/MainContainer';
 
 import './App.css';
