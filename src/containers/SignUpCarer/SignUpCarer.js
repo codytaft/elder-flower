@@ -70,6 +70,18 @@ export class SignUpCarer extends Component {
             name="emailAddress"
             placeHolder="Email Address"
           />
+          <section className="signup-phone-section">
+            <input
+              onChange={this.handleChange}
+              className="signup-phoneNumber"
+              value={this.state.phoneNumber}
+              name="phoneNumber"
+              placeholder="Phone Number"
+            />
+            <button onClick={this.testPhoneNumber} className="phone-test-btn">
+              Test Phone
+            </button>
+          </section>
           <input
             onChange={this.handleChange}
             className="signup-elder-name"
@@ -84,18 +96,9 @@ export class SignUpCarer extends Component {
             name="elderPhone"
             placeHolder="Elder Contact Phone"
           />
-          <button className="signup-submit-btn">Submit</button>
         </form>
-        <section className="signup-phone-section">
-          <input
-            onChange={this.handleChange}
-            className="signup-phoneNumber"
-            value={this.state.phoneNumber}
-            name="phoneNumber"
-            placeholder="Phone Number"
-          />
-          <button onClick={this.testPhoneNumber}>Test Phone</button>
-        </section>
+
+        <button className="signup-submit-btn">Submit</button>
       </section>
     );
   }
