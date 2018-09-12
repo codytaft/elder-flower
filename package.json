@@ -30,7 +30,7 @@
     "eject": "react-scripts eject",
     "eslint": "eslint src/"
   },
-  "proxy": "http://localhost:5000/",
+  "proxy": "http://localhost:3000/",
   "devDependencies": {
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
