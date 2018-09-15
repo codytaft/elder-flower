@@ -27,11 +27,11 @@ export class Login extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className="login-form">
         <input
           onChange={this.handleChange}
           type="text"
-          className="login-email-input"
+          className="login-email-input login-input"
           value={this.state.email}
           name="email"
           placeholder="Email Address"
@@ -39,7 +39,7 @@ export class Login extends Component {
         <input
           onChange={this.handleChange}
           type="text"
-          className="login-password-input"
+          className="login-password-input login-input"
           value={this.state.password}
           name="password"
           placeholder="Password"
@@ -49,6 +49,11 @@ export class Login extends Component {
     );
   }
 }
+
+Login.propTypes = {
+  setCurrentUser: PropTypes.func.isRequired,
+  currentUser: PropTypes.object
+};
 
 export const mapStateToProps = state => ({
   currentUser: state.currentUser

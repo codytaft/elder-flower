@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { createElder, setCurrentUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
 
+import './SignUpElder.css';
 export class SignUpElder extends Component {
   constructor() {
     super();
@@ -24,14 +25,14 @@ export class SignUpElder extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const {
-      firstName,
-      lastName,
-      phoneNumber,
-      emailAddress,
-      emergencyName,
-      emergencyPhone
-    } = this.state;
+    // const {
+    //   firstName,
+    //   lastName,
+    //   phoneNumber,
+    //   emailAddress,
+    //   emergencyName,
+    //   emergencyPhone
+    // } = this.state;
     this.props.setCurrentUser(this.state);
   };
 
@@ -66,7 +67,9 @@ export class SignUpElder extends Component {
               name="phoneNumber"
               placeholder="Phone Number"
             />
-            <button onClick={this.testPhoneNumber}>Test Phone</button>
+            <button onClick={this.testPhoneNumber} className="phone-test-btn">
+              Test Phone
+            </button>
           </section>
 
           <input
@@ -74,7 +77,7 @@ export class SignUpElder extends Component {
             className="signup-email-address"
             value={this.state.emailAddress}
             name="emailAddress"
-            placeHolder="Email Address"
+            placeholder="Email Address"
           />
           <input
             onChange={this.handleChange}
@@ -96,6 +99,12 @@ export class SignUpElder extends Component {
     );
   }
 }
+
+SignUpElder.propTypes = {
+  setCurrentUser: PropTypes.func.isRequired,
+  createElder: PropTypes.func.isRequired,
+  currentUser: PropTypes.object
+};
 
 export const mapStateToProps = state => ({
   currentUser: state.currentUser

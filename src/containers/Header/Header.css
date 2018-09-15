@@ -1,0 +1,25 @@
+.main-header-section {
+  display: flex;
+  text-align: center;
+  justify-content: space-between; }
+
+.main-header-title {
+  width: 100%; }
+
+.nav-link-logout {
+  display: flex;
+  position: absolute;
+  right: 1rem;
+  justify-content: center;
+  margin: auto;
+  text-decoration: none;
+  align-items: center;
+  border: 0.1rem solid whitesmoke;
+  border-radius: 1rem;
+  height: 4rem;
+  width: 10rem;
+  font-size: 32px;
+  color: whitesmoke; }
+
+.nav-link-logout-hidden {
+  display: none; }

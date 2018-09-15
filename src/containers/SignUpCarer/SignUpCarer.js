@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { createCarer, setCurrentUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
 
+import './SignUpCarer.css';
+
 export class SignUpCarer extends Component {
   constructor() {
     super();
@@ -68,6 +70,18 @@ export class SignUpCarer extends Component {
             name="emailAddress"
             placeHolder="Email Address"
           />
+          <section className="signup-phone-section">
+            <input
+              onChange={this.handleChange}
+              className="signup-phoneNumber"
+              value={this.state.phoneNumber}
+              name="phoneNumber"
+              placeholder="Phone Number"
+            />
+            <button onClick={this.testPhoneNumber} className="phone-test-btn">
+              Test Phone
+            </button>
+          </section>
           <input
             onChange={this.handleChange}
             className="signup-elder-name"
@@ -82,26 +96,22 @@ export class SignUpCarer extends Component {
             name="elderPhone"
             placeHolder="Elder Contact Phone"
           />
-          <button className="signup-submit-btn">Submit</button>
         </form>
-        <section className="signup-phone-section">
-          <input
-            onChange={this.handleChange}
-            className="signup-phoneNumber"
-            value={this.state.phoneNumber}
-            name="phoneNumber"
-            placeholder="Phone Number"
-          />
-          <button onClick={this.testPhoneNumber}>Test Phone</button>
-        </section>
+
+        <button className="signup-submit-btn">Submit</button>
       </section>
     );
   }
 }
 
+SignUpCarer.propTypes = {
+  currentUser: PropTypes.object,
+  setCurrentUser: PropTypes.func.isRequired,
+  createCarer: PropTypes.func.isRequired
+};
+
 export const mapStateToProps = state => ({
-  currentUser: state.currentUser,
-  carers: state.carers
+  currentUser: state.currentUser
 });
 
 export const mapDispatchToProps = dispatch => ({
