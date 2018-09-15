@@ -104,9 +104,14 @@ export class SignUpCarer extends Component {
   }
 }
 
+SignUpCarer.propTypes = {
+  currentUser: PropTypes.object,
+  setCurrentUser: PropTypes.func.isRequired,
+  createCarer: PropTypes.func.isRequired
+};
+
 export const mapStateToProps = state => ({
-  currentUser: state.currentUser,
-  carers: state.carers
+  currentUser: state.currentUser
 });
 
 export const mapDispatchToProps = dispatch => ({
