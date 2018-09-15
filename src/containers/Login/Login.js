@@ -50,6 +50,11 @@ export class Login extends Component {
   }
 }
 
+Login.propTypes = {
+  setCurrentUser: PropTypes.func.isRequired,
+  currentUser: PropTypes.object
+};
+
 export const mapStateToProps = state => ({
   currentUser: state.currentUser
 });
