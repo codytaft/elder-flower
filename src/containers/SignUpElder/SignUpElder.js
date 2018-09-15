@@ -100,6 +100,12 @@ export class SignUpElder extends Component {
   }
 }
 
+SignUpElder.propTypes = {
+  setCurrentUser: PropTypes.func.isRequired,
+  createElder: PropTypes.func.isRequired,
+  currentUser: PropTypes.object
+};
+
 export const mapStateToProps = state => ({
   currentUser: state.currentUser
 });
