@@ -21,7 +21,7 @@ export class Header extends Component {
           className={
             !this.props.currentUser
               ? 'nav-link-logout-hidden'
-              : 'nav-link nav-link-logout'
+              : 'nav-link-logout'
           }
           onClick={this.logoutUser}
         >
