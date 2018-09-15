@@ -18,6 +18,10 @@
   background-color: seashell;
 }
 
+.login-input:focus {
+  outline: none;
+}
+
 .login-submit-button {
   margin: 2rem auto 2rem auto;
   text-decoration: none;
@@ -29,6 +33,10 @@
   height: 4rem;
   font-size: 32px;
   background-color: seashell;
+}
+
+.login-submit-button:focus {
+  outline: none;
 }
 
 .login-submit-button:hover {
