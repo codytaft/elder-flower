@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { setCurrentUser } from '../../actions';
-import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './Header.css';
 
@@ -32,6 +31,12 @@ export class Header extends Component {
     );
   }
 }
+
+Header.propTypes = {
+  history: PropTypes.object.isRequired,
+  setCurrentUser: PropTypes.func.isRequired,
+  currentUser: PropTypes.object
+};
 
 export const mapStateToProps = state => ({
   currentUser: state.currentUser
