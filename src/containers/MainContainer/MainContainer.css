@@ -8,13 +8,14 @@
   color: #4e2d1d; }
 
 .nav-link {
-  margin: 2rem;
+  margin: 2rem auto 2rem auto;
   text-decoration: none;
   padding: 2rem;
   border: 0.2rem solid #4e2d1d;
   color: #4e2d1d;
   border-radius: 5rem;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 20rem; }
 
 .nav-link:hover {
   background-color: rgba(78, 45, 29, 0.1); }
