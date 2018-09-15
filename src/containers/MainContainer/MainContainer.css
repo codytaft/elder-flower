@@ -19,3 +19,6 @@
 
 .nav-link:hover {
   background-color: rgba(78, 45, 29, 0.1); }
+
+.nav-link-hidden {
+  display: none; }

@@ -25,14 +25,14 @@ export class SignUpElder extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const {
-      firstName,
-      lastName,
-      phoneNumber,
-      emailAddress,
-      emergencyName,
-      emergencyPhone
-    } = this.state;
+    // const {
+    //   firstName,
+    //   lastName,
+    //   phoneNumber,
+    //   emailAddress,
+    //   emergencyName,
+    //   emergencyPhone
+    // } = this.state;
     this.props.setCurrentUser(this.state);
   };
 
@@ -77,7 +77,7 @@ export class SignUpElder extends Component {
             className="signup-email-address"
             value={this.state.emailAddress}
             name="emailAddress"
-            placeHolder="Email Address"
+            placeholder="Email Address"
           />
           <input
             onChange={this.handleChange}

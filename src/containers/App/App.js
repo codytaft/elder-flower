@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from '../../components/Routes/Routes';
 import { Route, NavLink } from 'react-router-dom';
 import Header from '../Header/Header';
-import { MainContainer } from '../MainContainer/MainContainer';
+import MainContainer from '../MainContainer/MainContainer';
 
 import './App.css';
 
