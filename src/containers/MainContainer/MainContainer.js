@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './MainContainer.css';
 export class MainContainer extends Component {
-  constructor() {
-    super(),
-      (this.state = {
-        isClicked: false
-      });
-  }
   render() {
     const { location } = this.props.history;
     return (
@@ -38,5 +33,9 @@ export class MainContainer extends Component {
     );
   }
 }
+
+MainContainer.propTypes = {
+  history: PropTypes.object.isRequired
+};
 
 export default withRouter(MainContainer);

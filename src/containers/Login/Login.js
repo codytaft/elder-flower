@@ -31,7 +31,7 @@ export class Login extends Component {
         <input
           onChange={this.handleChange}
           type="text"
-          className="login-email-input"
+          className="login-email-input login-input"
           value={this.state.email}
           name="email"
           placeholder="Email Address"
@@ -39,7 +39,7 @@ export class Login extends Component {
         <input
           onChange={this.handleChange}
           type="text"
-          className="login-password-input"
+          className="login-password-input login-input"
           value={this.state.password}
           name="password"
           placeholder="Password"
