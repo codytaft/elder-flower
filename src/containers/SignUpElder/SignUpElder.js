@@ -59,6 +59,13 @@ export class SignUpElder extends Component {
           name="lastName"
           placeholder="Last Name"
         />
+        <input
+          onChange={this.handleChange}
+          className="signup-email-address signup-input"
+          value={this.state.email}
+          name="email"
+          placeholder="Email Address"
+        />
         <section className="signup-phone-section">
           <input
             onChange={this.handleChange}
@@ -73,13 +80,6 @@ export class SignUpElder extends Component {
           </button>
         </section>
 
-        <input
-          onChange={this.handleChange}
-          className="signup-email-address signup-input"
-          value={this.state.email}
-          name="email"
-          placeholder="Email Address"
-        />
         <input
           onChange={this.handleChange}
           className="signup-carer-name signup-input"
