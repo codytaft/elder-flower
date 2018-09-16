@@ -80,6 +80,7 @@ export class SignUpCarer extends Component {
             value={this.state.phoneNumber}
             name="phoneNumber"
             placeholder="Phone Number"
+            style={{ marginLeft: '0px' }}
           />
           <button onClick={this.testPhoneNumber} className="phone-test-btn">
             Test
