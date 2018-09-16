@@ -12,8 +12,22 @@ const environment = process.env.NODE_ENV || 'development';
 const configuration = require('./knexfile')[environment];
 const database = require('knex')(configuration);
 
+app.use(
+  bodyParser.urlencoded({
+    extended: false
+  })
+);
 app.use(bodyParser.json());
+
+// app.use(function(req, res) {
+//   res.setHeader('Content-Type', 'text/plain');
+//   res.write('you posted:\n');
+//   res.end(JSON.stringify(req.body, null, 2));
+// });
+
 app.use(function(req, res, next) {
+  res.setHeader('Content-Type', 'application/json');
+
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', '*');
   res.header(
@@ -24,7 +38,6 @@ app.use(function(req, res, next) {
 });
 
 app.post('/api/sendMessage', (request, response) => {
-  console.log(request.body);
   client.messages
     .create({
       from: '+17203304593',
@@ -47,11 +60,12 @@ app.get('/api/v1/users/:phoneNumber', (request, response) => {
 });
 
 app.post('/api/v1/users/', (request, response) => {
-  const user = request.body;
+  const { user } = request.body;
+  console.log(user);
   database('users')
     .insert(user, 'isElder')
     .then(user => {
-      response.status(200).json(user);
+      response.status(201).json(user);
     });
 });
 

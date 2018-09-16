@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createCarer, setCurrentUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
+import { createUser } from '../../helpers/fetchCalls';
 
 import './SignUpCarer.css';
 
@@ -13,9 +14,10 @@ export class SignUpCarer extends Component {
       firstName: '',
       lastName: '',
       phoneNumber: '',
-      emailAddress: '',
-      elderName: '',
-      elderPhone: ''
+      email: '',
+      contactName: '',
+      contactPhone: '',
+      isElder: false
     };
   }
 
@@ -25,9 +27,10 @@ export class SignUpCarer extends Component {
   };
 
   handleClick = e => {
+    const user = this.state;
     e.preventDefault();
-    this.props.createCarer(this.state);
     this.props.setCurrentUser(this.state);
+    createUser(user);
   };
 
   testPhoneNumber = e => {
@@ -55,8 +58,8 @@ export class SignUpCarer extends Component {
         <input
           onChange={this.handleChange}
           className="signup-email-address signup-input"
-          value={this.state.emailAddress}
-          name="emailAddress"
+          value={this.state.email}
+          name="email"
           placeholder="Email Address"
         />
         <section className="signup-phone-section">
@@ -74,15 +77,15 @@ export class SignUpCarer extends Component {
         <input
           onChange={this.handleChange}
           className="signup-elder-name signup-input"
-          value={this.state.elderName}
-          name="elderName"
+          value={this.state.contactName}
+          name="contactName"
           placeholder="Elder Contact Name"
         />
         <input
           onChange={this.handleChange}
           className="signup-elder-phone signup-input"
-          value={this.state.elderPhone}
-          name="elderPhone"
+          value={this.state.contactPhone}
+          name="contactPhone"
           placeholder="Elder Contact Phone"
         />
         <button className="signup-submit-btn" onClick={this.handleClick}>

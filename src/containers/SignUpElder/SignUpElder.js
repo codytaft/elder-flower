@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createElder, setCurrentUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
+import { createUser } from '../../helpers/fetchCalls';
 
 import './SignUpElder.css';
 export class SignUpElder extends Component {
@@ -12,9 +13,10 @@ export class SignUpElder extends Component {
       firstName: '',
       lastName: '',
       phoneNumber: '',
-      emailAddress: '',
-      carerName: '',
-      carerPhone: ''
+      email: '',
+      contactName: '',
+      contactPhone: '',
+      isElder: true
     };
   }
 
@@ -24,16 +26,10 @@ export class SignUpElder extends Component {
   };
 
   handleSubmit = e => {
+    const user = this.state;
     e.preventDefault();
-    // const {
-    //   firstName,
-    //   lastName,
-    //   phoneNumber,
-    //   emailAddress,
-    //   emergencyName,
-    //   emergencyPhone
-    // } = this.state;
     this.props.setCurrentUser(this.state);
+    createUser(user);
   };
 
   testPhoneNumber = e => {
@@ -43,7 +39,7 @@ export class SignUpElder extends Component {
 
   render() {
     return (
-      <form className="signup-form" onSubmit={this.handleSubmit}>
+      <form className="signup-form">
         <input
           onChange={this.handleChange}
           className="signup-first-name signup-input"
@@ -74,25 +70,27 @@ export class SignUpElder extends Component {
         <input
           onChange={this.handleChange}
           className="signup-email-address signup-input"
-          value={this.state.emailAddress}
-          name="emailAddress"
+          value={this.state.email}
+          name="email"
           placeholder="Email Address"
         />
         <input
           onChange={this.handleChange}
           className="signup-carer-name signup-input"
-          value={this.state.emergencyName}
-          name="carerName"
+          value={this.state.contactName}
+          name="contactName"
           placeHolder="Carer Contact Name"
         />
         <input
           onChange={this.handleChange}
           className="signup-carer-phone signup-input"
-          value={this.state.carerPhone}
-          name="carerPhone"
+          value={this.state.contactPhone}
+          name="contactPhone"
           placeHolder="Carer Contact Phone"
         />
-        <button className="signup-submit-btn">Submit</button>
+        <button className="signup-submit-btn" onClick={this.handleSubmit}>
+          Submit
+        </button>
       </form>
     );
   }
