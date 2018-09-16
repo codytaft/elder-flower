@@ -43,59 +43,57 @@ export class SignUpElder extends Component {
 
   render() {
     return (
-      <section className="signup-page">
-        <form className="signup-form" onSubmit={this.handleSubmit}>
+      <form className="signup-form" onSubmit={this.handleSubmit}>
+        <input
+          onChange={this.handleChange}
+          className="signup-first-name signup-input"
+          value={this.state.firstName}
+          name="firstName"
+          placeholder="First Name"
+        />
+        <input
+          onChange={this.handleChange}
+          className="signup-last-name, signup-input"
+          value={this.state.lastName}
+          name="lastName"
+          placeholder="Last Name"
+        />
+        <section className="signup-phone-section">
           <input
             onChange={this.handleChange}
-            className="signup-first-name"
-            value={this.state.firstName}
-            name="firstName"
-            placeholder="First Name"
+            className="signup-phoneNumber signup-input"
+            value={this.state.phoneNumber}
+            name="phoneNumber"
+            placeholder="Phone Number"
           />
-          <input
-            onChange={this.handleChange}
-            className="signup-last-name"
-            value={this.state.lastName}
-            name="lastName"
-            placeholder="Last Name"
-          />
-          <section className="signup-phone-section">
-            <input
-              onChange={this.handleChange}
-              className="signup-phoneNumber"
-              value={this.state.phoneNumber}
-              name="phoneNumber"
-              placeholder="Phone Number"
-            />
-            <button onClick={this.testPhoneNumber} className="phone-test-btn">
-              Test Phone
-            </button>
-          </section>
+          <button onClick={this.testPhoneNumber} className="phone-test-btn">
+            Test
+          </button>
+        </section>
 
-          <input
-            onChange={this.handleChange}
-            className="signup-email-address"
-            value={this.state.emailAddress}
-            name="emailAddress"
-            placeholder="Email Address"
-          />
-          <input
-            onChange={this.handleChange}
-            className="signup-carer-name"
-            value={this.state.emergencyName}
-            name="carerName"
-            placeHolder="Carer Contact Name"
-          />
-          <input
-            onChange={this.handleChange}
-            className="signup-carer-phone"
-            value={this.state.carerPhone}
-            name="carerPhone"
-            placeHolder="Carer Contact Phone"
-          />
-          <button className="signup-submit-btn">Submit</button>
-        </form>
-      </section>
+        <input
+          onChange={this.handleChange}
+          className="signup-email-address signup-input"
+          value={this.state.emailAddress}
+          name="emailAddress"
+          placeholder="Email Address"
+        />
+        <input
+          onChange={this.handleChange}
+          className="signup-carer-name signup-input"
+          value={this.state.emergencyName}
+          name="carerName"
+          placeHolder="Carer Contact Name"
+        />
+        <input
+          onChange={this.handleChange}
+          className="signup-carer-phone signup-input"
+          value={this.state.carerPhone}
+          name="carerPhone"
+          placeHolder="Carer Contact Phone"
+        />
+        <button className="signup-submit-btn">Submit</button>
+      </form>
     );
   }
 }
