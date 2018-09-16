@@ -41,7 +41,8 @@
 
 .signup-phone-section {
   display: flex;
-  width: 33.5rem; }
+  width: 33.5rem;
+  align-items: center; }
 
 .signup-phoneNumber {
   margin-right: 1rem; }
