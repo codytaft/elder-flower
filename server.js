@@ -19,12 +19,6 @@ app.use(
 );
 app.use(bodyParser.json());
 
-// app.use(function(req, res) {
-//   res.setHeader('Content-Type', 'text/plain');
-//   res.write('you posted:\n');
-//   res.end(JSON.stringify(req.body, null, 2));
-// });
-
 app.use(function(req, res, next) {
   res.setHeader('Content-Type', 'application/json');
 
@@ -38,11 +32,12 @@ app.use(function(req, res, next) {
 });
 
 app.post('/api/sendMessage', (request, response) => {
+  console.log(request.body);
   client.messages
     .create({
       from: '+17203304593',
-      body: 'hi',
-      to: '+19038511575'
+      body: 'test',
+      to: request.body.phoneNumber
     })
     .then(message => console.log(message.sid))
     .done();
