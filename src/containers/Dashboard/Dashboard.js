@@ -1,24 +1,32 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { Navigation } from '../Navigation/Navigation';
 import MainContainer from '../MainContainer/MainContainer';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import { setCurrentUser } from '../../actions';
-import { Header } from '../Header/Header';
+import Header from '../Header/Header';
 
-export class Home extends Component {
+export class Dashboard extends Component {
   render() {
     return (
       <section>
         <Header />
-        {/* <Navigation /> */}
-        <MainContainer />
+        <Navigation />
+        {/* <MainContainer /> */}
       </section>
     );
   }
 }
+
+Dashboard.propTypes = {
+  setCurrentUser: PropTypes.func.isRequired,
+  currentUser: PropTypes.object
+};
+
+export const mapStateToProps = state => ({
+  currentUser: state.currentUser
+});
 
 export const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
@@ -26,7 +34,7 @@ export const mapDispatchToProps = dispatch => ({
 
 export default withRouter(
   connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps
-  )(Home)
+  )(Dashboard)
 );

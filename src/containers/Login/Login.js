@@ -21,8 +21,11 @@ export class Login extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    const { setCurrentUser, history } = this.props;
     const currentUser = this.state;
-    this.props.setCurrentUser(currentUser);
+    setCurrentUser(currentUser);
+    const location = { pathname: './dashboard' };
+    history.push(location);
   };
 
   render() {
@@ -52,7 +55,8 @@ export class Login extends Component {
 
 Login.propTypes = {
   setCurrentUser: PropTypes.func.isRequired,
-  currentUser: PropTypes.object
+  currentUser: PropTypes.object,
+  history: PropTypes.object
 };
 
 export const mapStateToProps = state => ({

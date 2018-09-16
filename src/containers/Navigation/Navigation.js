@@ -5,11 +5,11 @@ export const Navigation = {
   render() {
     return (
       <section className="nav-link-section">
-        <NavLink exact to="/login" className="nav-link nav-link-login">
-          Login
+        <NavLink exact to="/contacts" className="nav-link nav-link-contacts">
+          Contacts
         </NavLink>
-        <NavLink exact to="/sign-up-home" className="nav-link nav-link-signup">
-          SignUp
+        <NavLink exact to="/emergency" className="nav-link nav-link-emergency">
+          Emergency
         </NavLink>
       </section>
     );

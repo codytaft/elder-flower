@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './MainContainer.css';
 export class MainContainer extends Component {
   render() {
-    const { location } = this.props.history;
+    const { location } = this.props;
     return (
       <section className="nav-link-section">
         <NavLink
@@ -35,7 +35,7 @@ export class MainContainer extends Component {
 }
 
 MainContainer.propTypes = {
-  history: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired
 };
 
 export default withRouter(MainContainer);
