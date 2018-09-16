@@ -30,18 +30,8 @@ export class SignUpCarer extends Component {
     this.props.setCurrentUser(this.state);
   };
 
-  // setCurrentUser = () => {
-  //   const { firstName, lastName, phoneNumber } = this.state;
-  //   const currentUser = {
-  //     FirstName: firstName,
-  //     LastName: lastName,
-  //     PhoneNumber: phoneNumber
-  //   };
-  //   this.props.setCurrentUser(currentUser);
-  // };
-
   testPhoneNumber = e => {
-    e.preventDefault;
+    e.preventDefault();
   };
 
   render() {
