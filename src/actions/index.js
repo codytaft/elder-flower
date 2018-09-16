@@ -10,5 +10,6 @@ export const createCarer = user => ({
 
 export const createElder = user => ({
   type: 'CREATE_ELDER',
-  user
+  user,
+  isElder: true
 });
