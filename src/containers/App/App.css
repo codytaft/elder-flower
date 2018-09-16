@@ -1,8 +1,11 @@
 .app {
   font-family: 'Nunito', sans-serif;
-  height: 100vh;
+  height: -webkit-fill-available;
   text-align: center;
   background-image: linear-gradient(to top, #eacda3, #c7c293, #a3b78b, #80aa88, #5f9c89); }
+
+.app-hidden {
+  height: 100%; }
 
 .app-header {
   height: 150px;
