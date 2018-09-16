@@ -14,7 +14,16 @@ export class Header extends Component {
     // console.log(this.props.currentUser);
     return (
       <section className="main-header-section">
-        <h1 className="main-header-title">Welcome to Elder Flower</h1>
+        {this.props.currentUser ? (
+          <h1 className="main-header-title">
+            Hello {this.props.currentUser.email}
+          </h1>
+        ) : (
+          <h1 className="main-header-title">
+            Welcome to Elder Flower. <br />
+            Please Login or Sign Up.
+          </h1>
+        )}
         <Link
           exact
           to="/"
