@@ -1,17 +1,65 @@
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 25rem;
+  margin: auto; }
+
 .phone-test-btn {
   display: flex;
   justify-content: center;
   align-content: center;
-  margin: auto;
-  width: 5rem; }
+  margin-left: 1rem;
+  width: 5rem;
+  height: 4rem;
+  border: 0.1rem solid #4e2d1d;
+  background-color: seashell;
+  border-radius: 3rem;
+  font-size: 32px;
+  cursor: pointer; }
+
+.phone-test-btn:hover {
+  background-color: #d7968d; }
+
+.phone-test-btn:focus {
+  outline: none; }
+
+.signup-input {
+  text-decoration: none;
+  font-size: 32px;
+  margin: 2rem auto 2rem auto;
+  border-radius: 3rem;
+  padding-left: 1rem;
+  border: 0.1rem solid #4e2d1d;
+  color: #4e2d1d;
+  height: 4rem;
+  background-color: seashell;
+  width: 25rem; }
+
+.signup-input:focus {
+  outline: none; }
 
 .signup-phone-section {
   display: flex;
-  width: 15rem; }
+  width: 33.5rem; }
+
+.signup-phoneNumber {
+  margin-right: 1rem; }
 
 .signup-submit-btn {
-  display: flex;
-  justify-content: center;
-  align-content: center;
   margin: auto;
-  width: 5rem; }
+  text-decoration: none;
+  border: 0.2rem solid #4e2d1d;
+  color: #4e2d1d;
+  border-radius: 5rem;
+  cursor: pointer;
+  width: 26rem;
+  height: 4rem;
+  font-size: 32px;
+  background-color: seashell; }
+
+.signup-submit-btn:hover {
+  background-color: #d7968d; }
+
+.signup-submit-btn:focus {
+  outline: none; }
