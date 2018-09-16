@@ -85,14 +85,14 @@ export class SignUpElder extends Component {
           className="signup-carer-name signup-input"
           value={this.state.contactName}
           name="contactName"
-          placeHolder="Carer Contact Name"
+          placeholder="Carer Contact Name"
         />
         <input
           onChange={this.handleChange}
           className="signup-carer-phone signup-input"
           value={this.state.contactPhone}
           name="contactPhone"
-          placeHolder="Carer Contact Phone"
+          placeholder="Carer Contact Phone"
         />
         <button className="signup-submit-btn" onClick={this.handleSubmit}>
           Submit
