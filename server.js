@@ -36,31 +36,48 @@ app.post('/api/sendMessage', (request, response) => {
   client.messages
     .create({
       from: '+17203304593',
-      body: 'test',
-      to: request.body.phoneNumber
+      body: request.body.body,
+      to: request.body.from
     })
     .then(message => console.log(message.sid))
     .done();
 });
 
-app.get('/api/v1/users/:phoneNumber', (request, response) => {
-  database('users')
-    .select()
-    .then(users => {
-      response.status(200).json(users);
-    })
-    .catch(error => {
-      response.status(500).json({ error });
-    });
-});
+// app.get('/api/v1/users/:phoneNumber', (request, response) => {
+//   database('users')
+//     .select()
+//     .then(users => {
+//       response.status(200).json(users);
+//     })
+//     .catch(error => {
+//       response.status(500).json({ error });
+//     });
+// });
 
 app.post('/api/v1/users/', (request, response) => {
   const { user } = request.body;
-  console.log(user);
   database('users')
-    .insert(user, 'isElder')
+    .insert(user, 'id')
     .then(user => {
       response.status(201).json(user);
+    });
+});
+
+app.get('/api/v1/users/:email', (request, response) => {
+  database('users')
+    .where('email', request.params.email)
+    .select()
+    .then(users => {
+      if (users.length) {
+        response.status(200).json(users);
+      } else {
+        response.status(404).json({
+          error: `Could not find user with email${request.params.id}`
+        });
+      }
+    })
+    .catch(error => {
+      response.status(500).json({ error });
     });
 });
 

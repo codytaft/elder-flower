@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { setCurrentUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
+import { setCurrentUser } from '../../actions';
+import { getUser } from '../../helpers/fetchCalls';
 import './Login.css';
 
 export class Login extends Component {
@@ -21,9 +22,8 @@ export class Login extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { setCurrentUser, history } = this.props;
-    const currentUser = this.state;
-    setCurrentUser(currentUser);
+    const { history } = this.props;
+    getUser(this.state.email);
     const location = { pathname: './dashboard' };
     history.push(location);
   };
