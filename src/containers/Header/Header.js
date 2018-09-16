@@ -7,21 +7,20 @@ import './Header.css';
 
 export class Header extends Component {
   logoutUser = () => {
-    this.props.setCurrentUser(null);
-    this.props.history.replace('/');
+    const { setCurrentUser, history } = this.props;
+    setCurrentUser(null);
+    history.replace('/');
   };
   render() {
-    // console.log(this.props.currentUser);
+    const { currentUser, location } = this.props;
     return (
       <section className="main-header-section">
-        {this.props.currentUser ? (
-          <h1 className="main-header-title">
-            Hello {this.props.currentUser.email}
-          </h1>
+        {currentUser ? (
+          <h1 className="main-header-title">Hello {currentUser.email}</h1>
         ) : (
           <h1 className="main-header-title">
             Welcome to Elder Flower. <br />
-            Please Login or Sign Up.
+            {location.pathname === '/' ? `Please Login or Sign Up.` : ''}
           </h1>
         )}
         <Link
