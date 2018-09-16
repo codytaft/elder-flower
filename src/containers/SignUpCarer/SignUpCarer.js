@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createCarer, setCurrentUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
-import { createUser } from '../../helpers/fetchCalls';
+import { createUser, testPhoneNumber } from '../../helpers/fetchCalls';
 
 import './SignUpCarer.css';
 
@@ -35,6 +35,12 @@ export class SignUpCarer extends Component {
 
   testPhoneNumber = e => {
     e.preventDefault();
+    const cleanPhoneNumber = `+1${this.state.phoneNumber.replace(
+      /[- ._]/g,
+      ''
+    )}`;
+    console.log(cleanPhoneNumber);
+    testPhoneNumber(cleanPhoneNumber);
   };
 
   render() {
