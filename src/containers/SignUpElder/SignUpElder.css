@@ -40,12 +40,9 @@
 
 .signup-phone-section {
   display: flex;
+  justify-content: space-between;
   width: 33.5rem;
   align-items: center; }
-
-.signup-phoneNumber {
-  margin-right: 1rem;
-  margin-left: 0; }
 
 .signup-submit-btn {
   margin: auto;
