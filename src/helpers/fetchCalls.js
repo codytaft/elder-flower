@@ -8,16 +8,13 @@ export const testPhoneNumber = async phoneNumber => {
   });
 };
 
-export const testCarerResponsePhoneNumber = async (
-  phoneNumber,
-  contactName
-) => {
+export const testCarerResponsePhoneNumber = async (phoneNumber, firstName) => {
   const res = await fetch(`http://localhost:3000/api/sendMessage`, {
     method: 'POST',
     body: JSON.stringify({
-      name: contactName,
+      name: firstName,
       from: phoneNumber,
-      body: `If this is ${contactName}, type 'yes'. If not type 'no'.`
+      body: `If this is ${firstName}, type 'yes'. If not type 'no'.`
     }),
     headers: {
       'Content-Type': 'application/json'
@@ -36,6 +33,6 @@ export const createUser = async user => {
   });
 };
 
-export const getUser = async email => {
-  const res = await fetch(`http://localhost:3000/api/v1/users/:email`, {});
+export const getUser = async (email, password) => {
+  await fetch(`http://localhost:3000/api/v1/users/${email}/${password}`);
 };
