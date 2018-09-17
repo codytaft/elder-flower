@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Routes from '../../components/Routes/Routes';
 import Header from '../Header/Header';
 import MainContainer from '../MainContainer/MainContainer';
@@ -13,9 +14,9 @@ class App extends Component {
       <Router>
         <div
           className={
-            location.pathname === '/sign-up-elder' || '/sign-up-carer'
-              ? 'app-hidden app'
-              : 'app'
+            location.pathname !== '/sign-up-elder' || '/sign-up-carer'
+              ? 'app'
+              : 'app app-hidden'
           }
         >
           <header className="app-header">
@@ -30,4 +31,8 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  location: PropTypes.object
+};
 export default withRouter(App);
