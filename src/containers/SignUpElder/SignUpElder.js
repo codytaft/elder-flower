@@ -30,6 +30,8 @@ export class SignUpElder extends Component {
     e.preventDefault();
     this.props.setCurrentUser(this.state);
     createUser(user);
+    const location = { pathname: './dashboard' };
+    this.props.history.push(location);
   };
 
   testPhoneNumber = e => {
@@ -38,7 +40,6 @@ export class SignUpElder extends Component {
       /[- ._]/g,
       ''
     )}`;
-    console.log(cleanPhoneNumber);
     testPhoneNumber(cleanPhoneNumber);
   };
 
@@ -105,7 +106,8 @@ export class SignUpElder extends Component {
 SignUpElder.propTypes = {
   setCurrentUser: PropTypes.func.isRequired,
   createElder: PropTypes.func.isRequired,
-  currentUser: PropTypes.object
+  currentUser: PropTypes.object,
+  history: PropTypes.object
 };
 
 export const mapStateToProps = state => ({

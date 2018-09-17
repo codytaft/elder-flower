@@ -36,6 +36,8 @@ export class SignUpCarer extends Component {
     this.setState({ phoneNumber, contactPhone });
     this.props.setCurrentUser(this.state);
     createUser(this.state);
+    const location = { pathname: './dashboard' };
+    this.props.history.push(location);
   };
 
   testPhoneNumber = e => {
@@ -44,8 +46,7 @@ export class SignUpCarer extends Component {
       /[- ._]/g,
       ''
     )}`;
-    console.log(cleanPhoneNumber);
-    testCarerResponsePhoneNumber(cleanPhoneNumber, this.state.contactName);
+    testCarerResponsePhoneNumber(cleanPhoneNumber, this.state.firstName);
   };
 
   render() {
