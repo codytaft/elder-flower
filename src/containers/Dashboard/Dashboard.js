@@ -13,7 +13,7 @@ export class Dashboard extends Component {
       <section>
         <Header />
         <Navigation />
-        {/* <MainContainer /> */}
+        <MainContainer />
       </section>
     );
   }

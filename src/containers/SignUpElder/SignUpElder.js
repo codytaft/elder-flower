@@ -4,8 +4,11 @@ import { connect } from 'react-redux';
 import { setCurrentUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
 import { createUser, testPhoneNumber } from '../../helpers/fetchCalls';
-
 import './SignUpElder.css';
+
+// var bcrypt = require('bcrypt');
+// const saltRounds = 10;
+
 export class SignUpElder extends Component {
   constructor() {
     super();
@@ -16,7 +19,8 @@ export class SignUpElder extends Component {
       email: '',
       contactName: '',
       contactPhone: '',
-      isElder: true
+      isElder: true,
+      password: ''
     };
   }
 
@@ -25,9 +29,15 @@ export class SignUpElder extends Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = e => {
-    const user = this.state;
+  handleSubmit = async e => {
     e.preventDefault();
+    const cleanPhoneNumber = `+1${this.state.phoneNumber.replace(
+      /[- ._]/g,
+      ''
+    )}`;
+    // bcrypt.hash(this.state.password, saltRounds, function(err, hash) {});
+    await this.setState({ phoneNumber: cleanPhoneNumber });
+    const user = this.state;
     this.props.setCurrentUser(this.state);
     createUser(user);
     const location = { pathname: './dashboard' };

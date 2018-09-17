@@ -16,11 +16,11 @@ export class Header extends Component {
     return (
       <section className="main-header-section">
         {currentUser ? (
-          <h1 className="main-header-title">Hello {currentUser.email}</h1>
+          <h1 className="main-header-title">Hello {currentUser.name}</h1>
         ) : (
           <h1 className="main-header-title">
-            Welcome to Elder Flower. <br />
-            {location.pathname === '/' ? `Please Login or Sign Up.` : ''}
+            Welcome to Elder Flower <br />
+            {location.pathname === '/' ? `Login or Sign Up` : ''}
           </h1>
         )}
         <Link
