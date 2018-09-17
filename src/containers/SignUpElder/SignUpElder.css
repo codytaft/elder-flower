@@ -61,3 +61,9 @@
 
 .signup-submit-btn:focus {
   outline: none; }
+
+.signup-submit-btn:disabled {
+  opacity: 0.5; }
+
+.signup-submit-btn:disabled:hover {
+  background-color: seashell; }

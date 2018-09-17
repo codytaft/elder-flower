@@ -29,13 +29,11 @@ export class SignUpElder extends Component {
 
   handleSubmit = async e => {
     e.preventDefault();
-    const cleanPhoneNumber = `+1${this.state.phoneNumber.replace(
-      /[- ._]/g,
-      ''
-    )}`;
+    const phoneNumber = `+1${this.state.phoneNumber.replace(/[- ._]/g, '')}`;
+    const contactPhone = `+1${this.state.contactPhone.replace(/[- ._]/g, '')}`;
     const salt = bcrypt.genSaltSync(10);
     const hash = bcrypt.hashSync('hello', salt);
-    await this.setState({ phoneNumber: cleanPhoneNumber, password: hash });
+    await this.setState({ phoneNumber, contactPhone, password: hash });
     const user = this.state;
     this.props.setCurrentUser(this.state);
     createUser(user);
@@ -62,6 +60,14 @@ export class SignUpElder extends Component {
       contactName,
       contactPhone
     } = this.state;
+    const isEnabled =
+      firstName.length > 0 &&
+      lastName.length > 0 &&
+      phoneNumber.length > 0 &&
+      email.length &&
+      password.length > 0 &&
+      contactName.length > 0 &&
+      contactPhone.length > 0;
     return (
       <form className="signup-form">
         <input
@@ -101,7 +107,11 @@ export class SignUpElder extends Component {
             placeholder="Phone Number"
             style={{ marginLeft: '0px' }}
           />
-          <button onClick={this.testPhoneNumber} className="phone-test-btn">
+          <button
+            onClick={this.testPhoneNumber}
+            className="phone-test-btn"
+            isDisabled={!(phoneNumber.length > 0)}
+          >
             Test
           </button>
         </section>
@@ -120,7 +130,11 @@ export class SignUpElder extends Component {
           name="contactPhone"
           placeholder="Carer Contact Phone"
         />
-        <button className="signup-submit-btn" onClick={this.handleSubmit}>
+        <button
+          className="signup-submit-btn"
+          onClick={this.handleSubmit}
+          disabled={!isEnabled}
+        >
           Submit
         </button>
       </form>
