@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import bcrypt from 'bcryptjs';
 import { setCurrentUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
 import { createUser, testPhoneNumber } from '../../helpers/fetchCalls';
 import './SignUpElder.css';
-
-// var bcrypt = require('bcrypt');
-// const saltRounds = 10;
 
 export class SignUpElder extends Component {
   constructor() {
@@ -17,10 +15,10 @@ export class SignUpElder extends Component {
       lastName: '',
       phoneNumber: '',
       email: '',
+      password: '',
       contactName: '',
       contactPhone: '',
-      isElder: true,
-      password: ''
+      isElder: true
     };
   }
 
@@ -35,8 +33,9 @@ export class SignUpElder extends Component {
       /[- ._]/g,
       ''
     )}`;
-    // bcrypt.hash(this.state.password, saltRounds, function(err, hash) {});
-    await this.setState({ phoneNumber: cleanPhoneNumber });
+    const salt = bcrypt.genSaltSync(10);
+    const hash = bcrypt.hashSync('hello', salt);
+    await this.setState({ phoneNumber: cleanPhoneNumber, password: hash });
     const user = this.state;
     this.props.setCurrentUser(this.state);
     createUser(user);
@@ -54,34 +53,50 @@ export class SignUpElder extends Component {
   };
 
   render() {
+    const {
+      firstName,
+      lastName,
+      phoneNumber,
+      email,
+      password,
+      contactName,
+      contactPhone
+    } = this.state;
     return (
       <form className="signup-form">
         <input
           onChange={this.handleChange}
           className="signup-first-name signup-input"
-          value={this.state.firstName}
+          value={firstName}
           name="firstName"
           placeholder="First Name"
         />
         <input
           onChange={this.handleChange}
           className="signup-last-name, signup-input"
-          value={this.state.lastName}
+          value={lastName}
           name="lastName"
           placeholder="Last Name"
         />
         <input
           onChange={this.handleChange}
           className="signup-email-address signup-input"
-          value={this.state.email}
+          value={email}
           name="email"
           placeholder="Email Address"
+        />
+        <input
+          onChange={this.handleChange}
+          className="signup-password signup-input"
+          value={password}
+          name="password"
+          placeholder="Password"
         />
         <section className="signup-phone-section">
           <input
             onChange={this.handleChange}
             className="signup-phoneNumber signup-input"
-            value={this.state.phoneNumber}
+            value={phoneNumber}
             name="phoneNumber"
             placeholder="Phone Number"
             style={{ marginLeft: '0px' }}
@@ -94,14 +109,14 @@ export class SignUpElder extends Component {
         <input
           onChange={this.handleChange}
           className="signup-carer-name signup-input"
-          value={this.state.contactName}
+          value={contactName}
           name="contactName"
           placeholder="Carer Contact Name"
         />
         <input
           onChange={this.handleChange}
           className="signup-carer-phone signup-input"
-          value={this.state.contactPhone}
+          value={contactPhone}
           name="contactPhone"
           placeholder="Carer Contact Phone"
         />
