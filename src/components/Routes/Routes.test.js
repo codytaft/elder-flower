@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Routes } from './Routes';
-import Login from '../../containers/Login/Login';
+import { Login } from '../../containers/Login/Login';
 import SignUpHome from '../../components/SignUpHome/SignUpHome';
-import SignUpElder from '../../containers/SignUpElder/SignUpElder';
-import SignUpCarer from '../../containers/SignUpCarer/SignUpCarer';
+import { SignUpElder } from '../../containers/SignUpElder/SignUpElder';
+import { SignUpCarer } from '../../containers/SignUpCarer/SignUpCarer';
 
 describe('Routes', () => {
   beforeEach(() => {
