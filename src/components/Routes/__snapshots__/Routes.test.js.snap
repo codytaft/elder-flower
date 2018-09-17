@@ -1,11 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Routes should match snapshot of login Route 1`] = `
+exports[`Routes should match snapshot of / Route 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Unknown
-    component={undefined}
-    path="/login"
+    path="/"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -30,31 +29,29 @@ ShallowWrapper {
           path="/home"
 />,
         <Route
+          component={[Function]}
           exact={true}
-          path="/groups"
+          path="/login"
 />,
         <Route
+          component={[Function]}
           exact={true}
-          path="/new-group"
+          path="/sign-up-home"
 />,
         <Route
+          component={[Function]}
           exact={true}
-          path="/group-setup"
+          path="/sign-up-elder"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/sign-up-carer"
 />,
         <Route
           exact={true}
           path="/emergency"
           render={[Function]}
-/>,
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/sign-up"
-/>,
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/login"
 />,
       ],
     },
@@ -89,8 +86,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "component": [Function],
           "exact": true,
-          "path": "/groups",
+          "path": "/login",
         },
         "ref": null,
         "rendered": null,
@@ -101,8 +99,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "component": [Function],
           "exact": true,
-          "path": "/new-group",
+          "path": "/sign-up-home",
         },
         "ref": null,
         "rendered": null,
@@ -113,8 +112,22 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "component": [Function],
           "exact": true,
-          "path": "/group-setup",
+          "path": "/sign-up-elder",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/sign-up-carer",
         },
         "ref": null,
         "rendered": null,
@@ -128,32 +141,6 @@ ShallowWrapper {
           "exact": true,
           "path": "/emergency",
           "render": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "exact": true,
-          "path": "/sign-up",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "exact": true,
-          "path": "/login",
         },
         "ref": null,
         "rendered": null,
@@ -178,31 +165,29 @@ ShallowWrapper {
             path="/home"
 />,
           <Route
+            component={[Function]}
             exact={true}
-            path="/groups"
+            path="/login"
 />,
           <Route
+            component={[Function]}
             exact={true}
-            path="/new-group"
+            path="/sign-up-home"
 />,
           <Route
+            component={[Function]}
             exact={true}
-            path="/group-setup"
+            path="/sign-up-elder"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/sign-up-carer"
 />,
           <Route
             exact={true}
             path="/emergency"
             render={[Function]}
-/>,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/sign-up"
-/>,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/login"
 />,
         ],
       },
@@ -237,8 +222,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "component": [Function],
             "exact": true,
-            "path": "/groups",
+            "path": "/login",
           },
           "ref": null,
           "rendered": null,
@@ -249,8 +235,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "component": [Function],
             "exact": true,
-            "path": "/new-group",
+            "path": "/sign-up-home",
           },
           "ref": null,
           "rendered": null,
@@ -261,8 +248,22 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "component": [Function],
             "exact": true,
-            "path": "/group-setup",
+            "path": "/sign-up-elder",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/sign-up-carer",
           },
           "ref": null,
           "rendered": null,
@@ -281,14 +282,244 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`Routes should match snapshot of home Route 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    path="/home"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Route
+          exact={true}
+          path="/"
+/>,
+        <Route
+          exact={true}
+          path="/home"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/login"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/sign-up-home"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/sign-up-elder"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/sign-up-carer"
+/>,
+        <Route
+          exact={true}
+          path="/emergency"
+          render={[Function]}
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/home",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/login",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/sign-up-home",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/sign-up-elder",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/sign-up-carer",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/emergency",
+          "render": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Route
+            exact={true}
+            path="/"
+/>,
+          <Route
+            exact={true}
+            path="/home"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/login"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/sign-up-home"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/sign-up-elder"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/sign-up-carer"
+/>,
+          <Route
+            exact={true}
+            path="/emergency"
+            render={[Function]}
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "component": [Function],
             "exact": true,
-            "path": "/sign-up",
+            "path": "/",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/home",
           },
           "ref": null,
           "rendered": null,
@@ -302,6 +533,985 @@ ShallowWrapper {
             "component": [Function],
             "exact": true,
             "path": "/login",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/sign-up-home",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/sign-up-elder",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/sign-up-carer",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/emergency",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`Routes should match snapshot of login Route 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    component={[Function]}
+    path="/login"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Route
+          exact={true}
+          path="/"
+/>,
+        <Route
+          exact={true}
+          path="/home"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/login"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/sign-up-home"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/sign-up-elder"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/sign-up-carer"
+/>,
+        <Route
+          exact={true}
+          path="/emergency"
+          render={[Function]}
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/home",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/login",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/sign-up-home",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/sign-up-elder",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/sign-up-carer",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/emergency",
+          "render": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Route
+            exact={true}
+            path="/"
+/>,
+          <Route
+            exact={true}
+            path="/home"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/login"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/sign-up-home"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/sign-up-elder"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/sign-up-carer"
+/>,
+          <Route
+            exact={true}
+            path="/emergency"
+            render={[Function]}
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/home",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/login",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/sign-up-home",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/sign-up-elder",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/sign-up-carer",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/emergency",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`Routes should match snapshot of sign-up-carer Route 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    component={[Function]}
+    path="/sign-up-carer"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Route
+          exact={true}
+          path="/"
+/>,
+        <Route
+          exact={true}
+          path="/home"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/login"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/sign-up-home"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/sign-up-elder"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/sign-up-carer"
+/>,
+        <Route
+          exact={true}
+          path="/emergency"
+          render={[Function]}
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/home",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/login",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/sign-up-home",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/sign-up-elder",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/sign-up-carer",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/emergency",
+          "render": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Route
+            exact={true}
+            path="/"
+/>,
+          <Route
+            exact={true}
+            path="/home"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/login"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/sign-up-home"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/sign-up-elder"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/sign-up-carer"
+/>,
+          <Route
+            exact={true}
+            path="/emergency"
+            render={[Function]}
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/home",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/login",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/sign-up-home",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/sign-up-elder",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/sign-up-carer",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/emergency",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`Routes should match snapshot of sign-up-elder Route 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    component={[Function]}
+    path="/sign-up-elder"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Route
+          exact={true}
+          path="/"
+/>,
+        <Route
+          exact={true}
+          path="/home"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/login"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/sign-up-home"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/sign-up-elder"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/sign-up-carer"
+/>,
+        <Route
+          exact={true}
+          path="/emergency"
+          render={[Function]}
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/home",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/login",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/sign-up-home",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/sign-up-elder",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/sign-up-carer",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/emergency",
+          "render": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Route
+            exact={true}
+            path="/"
+/>,
+          <Route
+            exact={true}
+            path="/home"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/login"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/sign-up-home"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/sign-up-elder"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/sign-up-carer"
+/>,
+          <Route
+            exact={true}
+            path="/emergency"
+            render={[Function]}
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/home",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/login",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/sign-up-home",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/sign-up-elder",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/sign-up-carer",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/emergency",
+            "render": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -363,31 +1573,29 @@ ShallowWrapper {
           path="/home"
 />,
         <Route
+          component={[Function]}
           exact={true}
-          path="/groups"
+          path="/login"
 />,
         <Route
+          component={[Function]}
           exact={true}
-          path="/new-group"
+          path="/sign-up-home"
 />,
         <Route
+          component={[Function]}
           exact={true}
-          path="/group-setup"
+          path="/sign-up-elder"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/sign-up-carer"
 />,
         <Route
           exact={true}
           path="/emergency"
           render={[Function]}
-/>,
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/sign-up"
-/>,
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/login"
 />,
       ],
     },
@@ -422,8 +1630,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "component": [Function],
           "exact": true,
-          "path": "/groups",
+          "path": "/login",
         },
         "ref": null,
         "rendered": null,
@@ -434,8 +1643,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "component": [Function],
           "exact": true,
-          "path": "/new-group",
+          "path": "/sign-up-home",
         },
         "ref": null,
         "rendered": null,
@@ -446,8 +1656,22 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "component": [Function],
           "exact": true,
-          "path": "/group-setup",
+          "path": "/sign-up-elder",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/sign-up-carer",
         },
         "ref": null,
         "rendered": null,
@@ -461,32 +1685,6 @@ ShallowWrapper {
           "exact": true,
           "path": "/emergency",
           "render": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "exact": true,
-          "path": "/sign-up",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "exact": true,
-          "path": "/login",
         },
         "ref": null,
         "rendered": null,
@@ -511,31 +1709,29 @@ ShallowWrapper {
             path="/home"
 />,
           <Route
+            component={[Function]}
             exact={true}
-            path="/groups"
+            path="/login"
 />,
           <Route
+            component={[Function]}
             exact={true}
-            path="/new-group"
+            path="/sign-up-home"
 />,
           <Route
+            component={[Function]}
             exact={true}
-            path="/group-setup"
+            path="/sign-up-elder"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/sign-up-carer"
 />,
           <Route
             exact={true}
             path="/emergency"
             render={[Function]}
-/>,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/sign-up"
-/>,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/login"
 />,
         ],
       },
@@ -570,8 +1766,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "component": [Function],
             "exact": true,
-            "path": "/groups",
+            "path": "/login",
           },
           "ref": null,
           "rendered": null,
@@ -582,8 +1779,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "component": [Function],
             "exact": true,
-            "path": "/new-group",
+            "path": "/sign-up-home",
           },
           "ref": null,
           "rendered": null,
@@ -594,8 +1792,22 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "component": [Function],
             "exact": true,
-            "path": "/group-setup",
+            "path": "/sign-up-elder",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/sign-up-carer",
           },
           "ref": null,
           "rendered": null,
@@ -609,32 +1821,6 @@ ShallowWrapper {
             "exact": true,
             "path": "/emergency",
             "render": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/sign-up",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/login",
           },
           "ref": null,
           "rendered": null,
