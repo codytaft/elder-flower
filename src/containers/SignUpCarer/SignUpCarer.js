@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { createCarer, setCurrentUser } from '../../actions';
+import { setCurrentUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
 import {
   createUser,
@@ -112,7 +112,7 @@ export class SignUpCarer extends Component {
 SignUpCarer.propTypes = {
   currentUser: PropTypes.object,
   setCurrentUser: PropTypes.func.isRequired,
-  createCarer: PropTypes.func.isRequired
+  history: PropTypes.object
 };
 
 export const mapStateToProps = state => ({
@@ -120,7 +120,6 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  createCarer: user => dispatch(createCarer(user)),
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 

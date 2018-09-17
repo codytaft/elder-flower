@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { createElder, setCurrentUser } from '../../actions';
+import { setCurrentUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
 import { createUser, testPhoneNumber } from '../../helpers/fetchCalls';
 
@@ -105,7 +105,6 @@ export class SignUpElder extends Component {
 
 SignUpElder.propTypes = {
   setCurrentUser: PropTypes.func.isRequired,
-  createElder: PropTypes.func.isRequired,
   currentUser: PropTypes.object,
   history: PropTypes.object
 };
@@ -115,7 +114,6 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  createElder: user => dispatch(createElder(user)),
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 
