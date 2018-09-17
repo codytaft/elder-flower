@@ -18,10 +18,7 @@ export class Header extends Component {
         {currentUser ? (
           <h1 className="main-header-title">Hello {currentUser.name}</h1>
         ) : (
-          <h1 className="main-header-title">
-            Welcome to Elder Flower <br />
-            {location.pathname === '/' ? `Login or Sign Up` : ''}
-          </h1>
+          <h1 className="main-header-title">Welcome to Elder Flower </h1>
         )}
         <Link
           exact
@@ -43,7 +40,8 @@ export class Header extends Component {
 Header.propTypes = {
   history: PropTypes.object.isRequired,
   setCurrentUser: PropTypes.func.isRequired,
-  currentUser: PropTypes.object
+  currentUser: PropTypes.object,
+  location: PropTypes.object
 };
 
 export const mapStateToProps = state => ({

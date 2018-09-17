@@ -23,3 +23,8 @@
 
 .nav-link-logout-hidden {
   display: none; }
+
+.nav-link-logout:hover {
+  background-color: #c3fcf2;
+  color: #453d30;
+  border: 0.1rem solid #4e2d1d; }
