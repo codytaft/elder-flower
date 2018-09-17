@@ -32,7 +32,6 @@ app.use(function(req, res, next) {
 });
 
 app.post('/api/sendMessage', (request, response) => {
-  console.log(request.body);
   client.messages
     .create({
       from: '+17203304593',
