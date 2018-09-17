@@ -43,17 +43,6 @@ app.post('/api/sendMessage', (request, response) => {
     .done();
 });
 
-// app.get('/api/v1/users/:phoneNumber', (request, response) => {
-//   database('users')
-//     .select()
-//     .then(users => {
-//       response.status(200).json(users);
-//     })
-//     .catch(error => {
-//       response.status(500).json({ error });
-//     });
-// });
-
 app.post('/api/v1/users/', (request, response) => {
   const { user } = request.body;
   database('users')
@@ -66,13 +55,13 @@ app.post('/api/v1/users/', (request, response) => {
 app.get('/api/v1/users/:email', (request, response) => {
   database('users')
     .where('email', request.params.email)
-    .select()
+    .select('*')
     .then(users => {
       if (users.length) {
         response.status(200).json(users);
       } else {
         response.status(404).json({
-          error: `Could not find user with email${request.params.id}`
+          error: `Could not find user with email${request.params.email}`
         });
       }
     })

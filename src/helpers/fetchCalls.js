@@ -33,6 +33,7 @@ export const createUser = async user => {
   });
 };
 
-export const getUser = async (email, password) => {
-  await fetch(`http://localhost:3000/api/v1/users/${email}/${password}`);
+export const getUser = async email => {
+  const response = await fetch(`http://localhost:3000/api/v1/users/${email}`);
+  return response.json();
 };

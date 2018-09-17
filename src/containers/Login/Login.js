@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import bcrypt from 'bcryptjs';
 import { setCurrentUser } from '../../actions';
 import { getUser } from '../../helpers/fetchCalls';
 import './Login.css';
@@ -20,10 +21,22 @@ export class Login extends Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
+    const salt = bcrypt.genSaltSync(10);
     const { history } = this.props;
-    getUser(this.state.email);
+    const { email, password } = this.state;
+    const user = await getUser(email, password);
+    console.log(user);
+    const comparePassword = await bcrypt.compareSync(
+      password,
+      user[0].password
+    );
+    if (comparePassword) {
+      this.props.setCurrentUser(user[0]);
+    } else {
+      alert('User Not Found');
+    }
     const location = { pathname: './dashboard' };
     history.push(location);
   };
