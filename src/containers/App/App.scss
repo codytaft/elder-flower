@@ -1,6 +1,7 @@
 .app {
   font-family: 'Nunito', sans-serif;
-  height: -webkit-fill-available;
+  height: 100vh;
+  overflow: scroll;
   text-align: center;
   background-image: linear-gradient(
     to top,
