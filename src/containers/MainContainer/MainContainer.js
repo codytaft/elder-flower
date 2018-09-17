@@ -34,6 +34,10 @@ export class MainContainer extends Component {
   }
 }
 
+export const mapStateToProps = state => ({
+  currentUser: state.currentUser
+});
+
 MainContainer.propTypes = {
   location: PropTypes.object.isRequired
 };
