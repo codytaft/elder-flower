@@ -12,8 +12,16 @@ const environment = process.env.NODE_ENV || 'development';
 const configuration = require('./knexfile')[environment];
 const database = require('knex')(configuration);
 
+app.use(
+  bodyParser.urlencoded({
+    extended: false
+  })
+);
 app.use(bodyParser.json());
+
 app.use(function(req, res, next) {
+  res.setHeader('Content-Type', 'application/json');
+
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', '*');
   res.header(
@@ -24,34 +32,40 @@ app.use(function(req, res, next) {
 });
 
 app.post('/api/sendMessage', (request, response) => {
-  console.log(request.body);
   client.messages
     .create({
       from: '+17203304593',
-      body: 'hi',
-      to: '+19038511575'
+      body: request.body.body,
+      to: request.body.from
     })
     .then(message => console.log(message.sid))
     .done();
 });
 
-app.get('/api/v1/users/:phoneNumber', (request, response) => {
+app.post('/api/v1/users/', (request, response) => {
+  const { user } = request.body;
   database('users')
-    .select()
-    .then(users => {
-      response.status(200).json(users);
-    })
-    .catch(error => {
-      response.status(500).json({ error });
+    .insert(user, 'id')
+    .then(user => {
+      response.status(201).json(user);
     });
 });
 
-app.post('/api/v1/users/', (request, response) => {
-  const user = request.body;
+app.get('/api/v1/users/:email', (request, response) => {
   database('users')
-    .insert(user, 'isElder')
-    .then(user => {
-      response.status(200).json(user);
+    .where('email', request.params.email)
+    .select('*')
+    .then(users => {
+      if (users.length) {
+        response.status(200).json(users);
+      } else {
+        response.status(404).json({
+          error: `Could not find user with email${request.params.email}`
+        });
+      }
+    })
+    .catch(error => {
+      response.status(500).json({ error });
     });
 });
 

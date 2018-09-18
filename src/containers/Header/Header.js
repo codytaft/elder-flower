@@ -7,14 +7,19 @@ import './Header.css';
 
 export class Header extends Component {
   logoutUser = () => {
-    this.props.setCurrentUser(null);
-    this.props.history.replace('/');
+    const { setCurrentUser, history } = this.props;
+    setCurrentUser(null);
+    history.replace('/');
   };
   render() {
-    // console.log(this.props.currentUser);
+    const { currentUser } = this.props;
     return (
       <section className="main-header-section">
-        <h1 className="main-header-title">Welcome to Elder Flower</h1>
+        {currentUser ? (
+          <h1 className="main-header-title">Hello {currentUser.name}</h1>
+        ) : (
+          <h1 className="main-header-title">Welcome to Elder Flower </h1>
+        )}
         <Link
           exact
           to="/"
@@ -33,9 +38,10 @@ export class Header extends Component {
 }
 
 Header.propTypes = {
-  history: PropTypes.object.isRequired,
-  setCurrentUser: PropTypes.func.isRequired,
-  currentUser: PropTypes.object
+  history: PropTypes.object,
+  setCurrentUser: PropTypes.func,
+  currentUser: PropTypes.object,
+  location: PropTypes.object
 };
 
 export const mapStateToProps = state => ({

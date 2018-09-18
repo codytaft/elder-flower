@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { createCarer, setCurrentUser } from '../../actions';
+import bcrypt from 'bcryptjs';
+import { setCurrentUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
+import {
+  createUser,
+  testCarerResponsePhoneNumber
+} from '../../helpers/fetchCalls';
 
 import './SignUpCarer.css';
 
@@ -13,9 +18,11 @@ export class SignUpCarer extends Component {
       firstName: '',
       lastName: '',
       phoneNumber: '',
-      emailAddress: '',
-      elderName: '',
-      elderPhone: ''
+      email: '',
+      password: '',
+      contactName: '',
+      contactPhone: '',
+      isElder: false
     };
   }
 
@@ -24,82 +31,116 @@ export class SignUpCarer extends Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
-    this.props.createCarer(this.state);
-    // setCurrentUser();
+    const phoneNumber = `+1${this.state.phoneNumber.replace(/[- ._]/g, '')}`;
+    const contactPhone = `+1${this.state.contactPhone.replace(/[- ._]/g, '')}`;
+    const salt = bcrypt.genSaltSync(10);
+    const hash = bcrypt.hashSync(this.state.password, salt);
+    await this.setState({ phoneNumber, contactPhone, password: hash });
+    this.props.setCurrentUser(this.state);
+    createUser(this.state);
+    const location = { pathname: './dashboard' };
+    this.props.history.push(location);
   };
 
-  // setCurrentUser = () => {
-  //   const { firstName, lastName, phoneNumber } = this.state;
-  //   const currentUser = {
-  //     FirstName: firstName,
-  //     LastName: lastName,
-  //     PhoneNumber: phoneNumber
-  //   };
-  //   this.props.setCurrentUser(currentUser);
-  // };
-
   testPhoneNumber = e => {
-    e.preventDefault;
+    e.preventDefault();
+    const cleanPhoneNumber = `+1${this.state.phoneNumber.replace(
+      /[- ._]/g,
+      ''
+    )}`;
+    testCarerResponsePhoneNumber(cleanPhoneNumber, this.state.firstName);
   };
 
   render() {
+    const {
+      firstName,
+      lastName,
+      email,
+      password,
+      phoneNumber,
+      contactName,
+      contactPhone
+    } = this.state;
+    const isEnabled =
+      firstName.length > 0 &&
+      lastName.length > 0 &&
+      phoneNumber.length > 0 &&
+      email.length &&
+      password.length > 0 &&
+      contactName.length > 0 &&
+      contactPhone.length > 0;
     return (
-      <section className="signup-page">
-        <form className="signup-form" onSubmit={this.handleSubmit}>
-          <input
-            onChange={this.handleChange}
-            className="signup-first-name"
-            value={this.state.firstName}
-            name="firstName"
-            placeholder="First Name"
-          />
-          <input
-            onChange={this.handleChange}
-            className="signup-last-name"
-            value={this.state.lastName}
-            name="lastName"
-            placeholder="Last Name"
-          />
+      <form className="signup-form">
+        <input
+          onChange={this.handleChange}
+          className="signup-first-name signup-input"
+          value={firstName}
+          name="firstName"
+          placeholder="First Name"
+        />
+        <input
+          onChange={this.handleChange}
+          className="signup-last-name signup-input"
+          value={lastName}
+          name="lastName"
+          placeholder="Last Name"
+        />
 
+        <input
+          onChange={this.handleChange}
+          className="signup-email-address signup-input"
+          value={email}
+          name="email"
+          placeholder="Email Address"
+        />
+        <input
+          onChange={this.handleChange}
+          className="signup-password signup-input"
+          value={password}
+          name="password"
+          placeholder="Password"
+        />
+        <section className="signup-phone-section">
           <input
             onChange={this.handleChange}
-            className="signup-email-address"
-            value={this.state.emailAddress}
-            name="emailAddress"
-            placeHolder="Email Address"
+            className="signup-phoneNumber signup-input"
+            value={phoneNumber}
+            name="phoneNumber"
+            placeholder="Phone Number"
+            style={{ marginLeft: '0px' }}
           />
-          <section className="signup-phone-section">
-            <input
-              onChange={this.handleChange}
-              className="signup-phoneNumber"
-              value={this.state.phoneNumber}
-              name="phoneNumber"
-              placeholder="Phone Number"
-            />
-            <button onClick={this.testPhoneNumber} className="phone-test-btn">
-              Test Phone
-            </button>
-          </section>
-          <input
-            onChange={this.handleChange}
-            className="signup-elder-name"
-            value={this.state.elderName}
-            name="elderName"
-            placeHolder="Elder Contact Name"
-          />
-          <input
-            onChange={this.handleChange}
-            className="signup-elder-phone"
-            value={this.state.elderPhone}
-            name="elderPhone"
-            placeHolder="Elder Contact Phone"
-          />
-        </form>
-
-        <button className="signup-submit-btn">Submit</button>
-      </section>
+          <button
+            onClick={this.testPhoneNumber}
+            className="phone-test-btn"
+            isDisabled={!(phoneNumber.length > 0)}
+          >
+            Test
+          </button>
+        </section>
+        <input
+          onChange={this.handleChange}
+          className="signup-elder-name signup-input"
+          value={contactName}
+          name="contactName"
+          placeholder="Elder Contact Name"
+        />
+        <input
+          onChange={this.handleChange}
+          className="signup-elder-phone signup-input"
+          value={contactPhone}
+          name="contactPhone"
+          placeholder="Elder Contact Phone"
+        />
+        <button
+          className="signup-submit-btn"
+          onClick={this.handleSubmit}
+          disabled={!isEnabled}
+        >
+          Submit
+        </button>
+      </form>
     );
   }
 }
@@ -107,7 +148,7 @@ export class SignUpCarer extends Component {
 SignUpCarer.propTypes = {
   currentUser: PropTypes.object,
   setCurrentUser: PropTypes.func.isRequired,
-  createCarer: PropTypes.func.isRequired
+  history: PropTypes.object
 };
 
 export const mapStateToProps = state => ({
@@ -115,7 +156,6 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  createCarer: user => dispatch(createCarer(user)),
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 

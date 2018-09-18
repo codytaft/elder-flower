@@ -1,0 +1,345 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainContainer should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MainContainer
+    location={
+        Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link nav-link-login"
+          exact={true}
+          to="/login"
+>
+          LOGIN
+</NavLink>,
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link nav-link-signup"
+          exact={true}
+          to="/sign-up-home"
+>
+          SIGNUP
+</NavLink>,
+      ],
+      "className": "nav-link-section",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "LOGIN",
+          "className": "nav-link nav-link-login",
+          "exact": true,
+          "to": "/login",
+        },
+        "ref": null,
+        "rendered": "LOGIN",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "SIGNUP",
+          "className": "nav-link nav-link-signup",
+          "exact": true,
+          "to": "/sign-up-home",
+        },
+        "ref": null,
+        "rendered": "SIGNUP",
+        "type": [Function],
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link nav-link-login"
+            exact={true}
+            to="/login"
+>
+            LOGIN
+</NavLink>,
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link nav-link-signup"
+            exact={true}
+            to="/sign-up-home"
+>
+            SIGNUP
+</NavLink>,
+        ],
+        "className": "nav-link-section",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "LOGIN",
+            "className": "nav-link nav-link-login",
+            "exact": true,
+            "to": "/login",
+          },
+          "ref": null,
+          "rendered": "LOGIN",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "SIGNUP",
+            "className": "nav-link nav-link-signup",
+            "exact": true,
+            "to": "/sign-up-home",
+          },
+          "ref": null,
+          "rendered": "SIGNUP",
+          "type": [Function],
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`MainContainer should match the snapshot if pathname does not equal / 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MainContainer
+    location={
+        Object {
+            "hash": "",
+            "pathname": "/home",
+            "search": "",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link-hidden"
+          exact={true}
+          to="/login"
+>
+          LOGIN
+</NavLink>,
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link-hidden"
+          exact={true}
+          to="/sign-up-home"
+>
+          SIGNUP
+</NavLink>,
+      ],
+      "className": "nav-link-section",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "LOGIN",
+          "className": "nav-link-hidden",
+          "exact": true,
+          "to": "/login",
+        },
+        "ref": null,
+        "rendered": "LOGIN",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "SIGNUP",
+          "className": "nav-link-hidden",
+          "exact": true,
+          "to": "/sign-up-home",
+        },
+        "ref": null,
+        "rendered": "SIGNUP",
+        "type": [Function],
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link-hidden"
+            exact={true}
+            to="/login"
+>
+            LOGIN
+</NavLink>,
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link-hidden"
+            exact={true}
+            to="/sign-up-home"
+>
+            SIGNUP
+</NavLink>,
+        ],
+        "className": "nav-link-section",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "LOGIN",
+            "className": "nav-link-hidden",
+            "exact": true,
+            "to": "/login",
+          },
+          "ref": null,
+          "rendered": "LOGIN",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "SIGNUP",
+            "className": "nav-link-hidden",
+            "exact": true,
+            "to": "/sign-up-home",
+          },
+          "ref": null,
+          "rendered": "SIGNUP",
+          "type": [Function],
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { setCurrentUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
+import bcrypt from 'bcryptjs';
+import { setCurrentUser } from '../../actions';
+import { getUser } from '../../helpers/fetchCalls';
 import './Login.css';
 
 export class Login extends Component {
@@ -19,10 +21,23 @@ export class Login extends Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
-    const currentUser = this.state;
-    this.props.setCurrentUser(currentUser);
+    const salt = bcrypt.genSaltSync(10);
+    const { history } = this.props;
+    const { email, password } = this.state;
+    const user = await getUser(email, password);
+    const comparePassword = await bcrypt.compareSync(
+      password,
+      user[0].password
+    );
+    if (comparePassword) {
+      this.props.setCurrentUser(user[0]);
+    } else {
+      alert('User Not Found');
+    }
+    const location = { pathname: './dashboard' };
+    history.push(location);
   };
 
   render() {
@@ -52,7 +67,8 @@ export class Login extends Component {
 
 Login.propTypes = {
   setCurrentUser: PropTypes.func.isRequired,
-  currentUser: PropTypes.object
+  currentUser: PropTypes.object,
+  history: PropTypes.object
 };
 
 export const mapStateToProps = state => ({

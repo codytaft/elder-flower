@@ -1,14 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Routes } from './Routes';
-import Login from '../../containers/Login/Login';
-import SignUp from '../../containers/SignUp/SignUp';
-import { ExecutionStepContext } from 'twilio/lib/rest/studio/v1/flow/execution/executionStep';
+import { Login } from '../../containers/Login/Login';
+import SignUpHome from '../../components/SignUpHome/SignUpHome';
+import { SignUpElder } from '../../containers/SignUpElder/SignUpElder';
+import { SignUpCarer } from '../../containers/SignUpCarer/SignUpCarer';
 
 describe('Routes', () => {
-  let wrapper;
-
   beforeEach(() => {
+    let wrapper;
     wrapper = shallow(<Routes />);
   });
 
@@ -17,7 +17,29 @@ describe('Routes', () => {
     expect(loginWrapper).toMatchSnapshot();
   });
   it('should match snapshot of signup Route', () => {
-    let loginWrapper = shallow(<Routes path="/signup" component={SignUp} />);
-    expect(loginWrapper).toMatchSnapshot();
+    let signUpWrapper = shallow(
+      <Routes path="/signup" component={SignUpHome} />
+    );
+    expect(signUpWrapper).toMatchSnapshot();
+  });
+  it('should match snapshot of / Route', () => {
+    let rootWrapper = shallow(<Routes path="/" />);
+    expect(rootWrapper).toMatchSnapshot();
+  });
+  it('should match snapshot of home Route', () => {
+    let homeWrapper = shallow(<Routes path="/home" />);
+    expect(homeWrapper).toMatchSnapshot();
+  });
+  it('should match snapshot of sign-up-elder Route', () => {
+    let signUpElder = shallow(
+      <Routes path="/sign-up-elder" component={SignUpElder} />
+    );
+    expect(signUpElder).toMatchSnapshot();
+  });
+  it('should match snapshot of sign-up-carer Route', () => {
+    let signUpCarer = shallow(
+      <Routes path="/sign-up-carer" component={SignUpCarer} />
+    );
+    expect(signUpCarer).toMatchSnapshot();
   });
 });

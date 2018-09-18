@@ -1,20 +1,73 @@
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 25rem;
+  margin: auto;
+}
+
 .phone-test-btn {
   display: flex;
   justify-content: center;
   align-content: center;
-  margin: auto;
   width: 5rem;
+  height: 4rem;
+  border: 0.1rem solid #453d30;
+  background-color: seashell;
+  border-radius: 3rem;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.phone-test-btn:hover {
+  background-color: rgb(215, 150, 141);
+}
+
+.phone-test-btn:focus {
+  outline: none;
+}
+
+.signup-input {
+  text-decoration: none;
+  font-size: 32px;
+  margin: 1.5rem auto 1.5rem auto;
+  border-radius: 3rem;
+  padding-left: 1rem;
+  border: 0.1rem solid #453d30;
+  color: #453d30;
+  height: 4rem;
+  background-color: seashell;
+  width: 25rem;
+}
+
+.signup-input:focus {
+  outline: none;
 }
 
 .signup-phone-section {
   display: flex;
-  width: 15rem;
+  justify-content: space-between;
+  width: 33.5rem;
+  align-items: center;
 }
 
 .signup-submit-btn {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin: auto;
-  width: 5rem;
+  margin: 1.5rem auto;
+  text-decoration: none;
+  border: 0.2rem solid rgb(78, 45, 29);
+  color: #4e2d1d;
+  border-radius: 5rem;
+  cursor: pointer;
+  width: 26rem;
+  height: 4rem;
+  font-size: 32px;
+  background-color: seashell;
+}
+
+.signup-submit-btn:hover {
+  background-color: rgb(215, 150, 141);
+}
+
+.signup-submit-btn:focus {
+  outline: none;
 }

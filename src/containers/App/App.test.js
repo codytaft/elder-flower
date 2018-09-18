@@ -1,9 +1,41 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('App', () => {
+  it('should match the snapshot', () => {
+    let wrapper;
+    wrapper = shallow(<App />);
+    expect(wrapper).toMatchSnapshot();
+  });
+  it('should match the snapshot if location.pathname equals sign-up-elder', () => {
+    let wrapper;
+    const mockLocation = {
+      pathname: '/sign-up-elder',
+      search: '',
+      hash: ''
+    };
+    wrapper = shallow(<App location={mockLocation} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+  it('should match the snapshot if location.pathname equals sign-up-carer', () => {
+    let wrapper;
+    const mockLocation = {
+      pathname: '/sign-up-carer',
+      search: '',
+      hash: ''
+    };
+    wrapper = shallow(<App location={mockLocation} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+  it('should match the snapshot if location.pathname does not equal sign-up-elder or sign-up-carer', () => {
+    let wrapper;
+    const mockLocation = {
+      pathname: '/home',
+      search: '',
+      hash: ''
+    };
+    wrapper = shallow(<App location={mockLocation} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

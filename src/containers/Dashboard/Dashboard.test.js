@@ -1,13 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Login from './Login';
+import Dashboard from './Dashboard';
 import { setCurrentUser } from '../../actions';
-import { mapStateToProps, mapDispatchToProps } from './Login';
+import { mapStateToProps, mapDispatchToProps } from './Dashboard';
 
-describe('Login', () => {
+describe('Dashboard', () => {
   it('should match the snapshot', () => {
     let wrapper;
-    wrapper = shallow(<Login />);
+    wrapper = shallow(<Dashboard />);
     expect(wrapper).toMatchSnapshot();
   });
 });

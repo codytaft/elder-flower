@@ -1,19 +1,23 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-export const Navigation = {
-  render() {
-    return (
-      <section className="nav-link-section">
-        <NavLink exact to="/login" className="nav-link nav-link-login">
-          Login
-        </NavLink>
-        <NavLink exact to="/sign-up-home" className="nav-link nav-link-signup">
-          SignUp
-        </NavLink>
-      </section>
-    );
-  }
+import './Navigation.css';
+
+export const Navigation = () => {
+  return (
+    <header className="nav-link-bar">
+      <NavLink exact to="/contacts" className="side-nav-link nav-link-contacts">
+        Contacts
+      </NavLink>
+      <NavLink
+        exact
+        to="/emergency"
+        className="side-nav-link nav-link-emergency"
+      >
+        Emergency
+      </NavLink>
+    </header>
+  );
 };
 
 export default Navigation;

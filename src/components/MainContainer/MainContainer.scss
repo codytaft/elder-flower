@@ -5,20 +5,30 @@
   margin: auto;
   font-size: 40px;
   font-family: 'Nunito', sans-serif;
-  color: #4e2d1d; }
+  color: #453d30;
+  height: 100%;
+}
 
 .nav-link {
   margin: 2rem auto 2rem auto;
   text-decoration: none;
   padding: 2rem;
-  border: 0.2rem solid #4e2d1d;
-  color: #4e2d1d;
+  border: 0.2rem solid rgb(78, 45, 29);
+  color: #453d30;
   border-radius: 5rem;
   cursor: pointer;
-  width: 20rem; }
+  width: 20rem;
+  background: #eacda3;
+}
 
 .nav-link:hover {
-  background-color: rgba(78, 45, 29, 0.1); }
+  background-color: #c3fcf2;
+}
 
 .nav-link-hidden {
-  display: none; }
+  display: none;
+}
+
+// .nav-link:active {
+//   display: none;
+// }

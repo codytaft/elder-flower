@@ -9,10 +9,11 @@ exports.seed = function(knex, Promise) {
           .insert({
             firstName: 'Cody',
             lastName: 'Taft',
-            email: 'cody.taft@gmail.com',
+            email: 'codytaft@gmail.com',
             contactName: 'Gaynell',
             contactPhone: '+19038511575',
             phoneNumber: '+17203304593',
+            password: '123456',
             isElder: false
           })
           .then(() => console.log('Seeding Complete!'))

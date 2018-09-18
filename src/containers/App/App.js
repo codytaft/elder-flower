@@ -1,40 +1,38 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Routes from '../../components/Routes/Routes';
 import Header from '../Header/Header';
-import MainContainer from '../MainContainer/MainContainer';
+import MainContainer from '../../components/MainContainer/MainContainer';
 
 import './App.css';
 
 class App extends Component {
-  // async componentDidMount() {
-  //   const res = await fetch(`http://localhost:3000/api/sendMessage`, {
-  //     method: 'POST',
-  //     body: JSON.stringify({
-  //       to: '+19038511575',
-  //       from: '+17203304593',
-  //       body: 'hello'
-  //     })
-  //   });
-  //   // const result = await res.json();
-  //   // console.log(result);
-  // }
   render() {
+    const { location } = this.props;
     return (
-      <div>
-        <Router>
-          <div className="app">
-            <header className="app-header">
-              <Header />
-            </header>
-            <main className="main-container">
-              <MainContainer />
-              <Routes />
-            </main>
-          </div>
-        </Router>
-      </div>
+      <Router>
+        <div
+          className={
+            location.pathname !== '/sign-up-elder' || '/sign-up-carer'
+              ? 'app'
+              : 'app app-hidden'
+          }
+        >
+          <header className="app-header">
+            <Header />
+          </header>
+          <main className="main-container">
+            <MainContainer />
+            <Routes />
+          </main>
+        </div>
+      </Router>
     );
   }
 }
-export default App;
+
+App.propTypes = {
+  location: PropTypes.object
+};
+export default withRouter(App);
