@@ -1,0 +1,31 @@
+.nav-link-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  width: 100%;
+}
+
+.side-nav-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  margin: 0 1.5rem 0 1.5rem;
+  text-decoration: none;
+  font-size: 32px;
+  color: #4e2d1d;
+  border-radius: 5rem;
+  border: 0.1rem solid rgb(78, 45, 29);
+}
+
+.side-nav-link:hover {
+  background-color: rgba(215, 184, 141, 1);
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: row;
+}

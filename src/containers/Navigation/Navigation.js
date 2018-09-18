@@ -1,16 +1,22 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import './Navigation.css';
+
 export const Navigation = () => {
   return (
-    <section className="nav-link-section">
-      <NavLink exact to="/contacts" className="nav-link nav-link-contacts">
+    <header className="nav-link-bar">
+      <NavLink exact to="/contacts" className="side-nav-link nav-link-contacts">
         Contacts
       </NavLink>
-      <NavLink exact to="/emergency" className="nav-link nav-link-emergency">
+      <NavLink
+        exact
+        to="/emergency"
+        className="side-nav-link nav-link-emergency"
+      >
         Emergency
       </NavLink>
-    </section>
+    </header>
   );
 };
 
