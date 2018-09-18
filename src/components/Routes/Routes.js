@@ -5,6 +5,7 @@ import { SignUpHome } from '../../components/SignUpHome/SignUpHome';
 import SignUpElder from '../../containers/SignUpElder/SignUpElder';
 import SignUpCarer from '../../containers/SignUpCarer/SignUpCarer';
 import Emergency from '../../containers/Emergency/Emergency';
+import Dashboard from '../../containers/Dashboard/Dashboard';
 
 export const Routes = () => {
   return (
@@ -15,6 +16,7 @@ export const Routes = () => {
       <Route exact path="/sign-up-home" component={SignUpHome} />
       <Route exact path="/sign-up-elder" component={SignUpElder} />
       <Route exact path="/sign-up-carer" component={SignUpCarer} />
+      <Route exact path="/dashboard" component={Dashboard} />
       <Route
         exact
         path="/emergency"
