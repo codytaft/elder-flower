@@ -3,7 +3,7 @@
 exports[`SignupCarer should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withRouter(Connect(SignUpCarer)) />,
+  Symbol(enzyme.__unrendered__): <SignUpCarer />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -15,25 +15,513 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
-      "children": [Function],
+      "children": Array [
+        <input
+          className="signup-first-name signup-input"
+          name="firstName"
+          onChange={[Function]}
+          placeholder="First Name"
+          value=""
+/>,
+        <input
+          className="signup-last-name signup-input"
+          name="lastName"
+          onChange={[Function]}
+          placeholder="Last Name"
+          value=""
+/>,
+        <input
+          className="signup-email-address signup-input"
+          name="email"
+          onChange={[Function]}
+          placeholder="Email Address"
+          value=""
+/>,
+        <input
+          className="signup-password signup-input"
+          name="password"
+          onChange={[Function]}
+          placeholder="Password"
+          value=""
+/>,
+        <section
+          className="signup-phone-section"
+>
+          <input
+                    className="signup-phoneNumber signup-input"
+                    name="phoneNumber"
+                    onChange={[Function]}
+                    placeholder="Phone Number"
+                    style={
+                              Object {
+                                        "marginLeft": "0px",
+                                      }
+                    }
+                    value=""
+          />
+          <button
+                    className="phone-test-btn"
+                    isDisabled={true}
+                    onClick={[Function]}
+          >
+                    Test
+          </button>
+</section>,
+        <input
+          className="signup-elder-name signup-input"
+          name="contactName"
+          onChange={[Function]}
+          placeholder="Elder Contact Name"
+          value=""
+/>,
+        <input
+          className="signup-elder-phone signup-input"
+          name="contactPhone"
+          onChange={[Function]}
+          placeholder="Elder Contact Phone"
+          value=""
+/>,
+        <button
+          className="signup-submit-btn"
+          disabled={true}
+          onClick={[Function]}
+>
+          Submit
+</button>,
+      ],
+      "className": "signup-form",
     },
     "ref": null,
-    "rendered": [Function],
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "signup-first-name signup-input",
+          "name": "firstName",
+          "onChange": [Function],
+          "placeholder": "First Name",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "signup-last-name signup-input",
+          "name": "lastName",
+          "onChange": [Function],
+          "placeholder": "Last Name",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "signup-email-address signup-input",
+          "name": "email",
+          "onChange": [Function],
+          "placeholder": "Email Address",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "signup-password signup-input",
+          "name": "password",
+          "onChange": [Function],
+          "placeholder": "Password",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <input
+              className="signup-phoneNumber signup-input"
+              name="phoneNumber"
+              onChange={[Function]}
+              placeholder="Phone Number"
+              style={
+                            Object {
+                                          "marginLeft": "0px",
+                                        }
+              }
+              value=""
+/>,
+            <button
+              className="phone-test-btn"
+              isDisabled={true}
+              onClick={[Function]}
+>
+              Test
+</button>,
+          ],
+          "className": "signup-phone-section",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "signup-phoneNumber signup-input",
+              "name": "phoneNumber",
+              "onChange": [Function],
+              "placeholder": "Phone Number",
+              "style": Object {
+                "marginLeft": "0px",
+              },
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Test",
+              "className": "phone-test-btn",
+              "isDisabled": true,
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Test",
+            "type": "button",
+          },
+        ],
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "signup-elder-name signup-input",
+          "name": "contactName",
+          "onChange": [Function],
+          "placeholder": "Elder Contact Name",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "signup-elder-phone signup-input",
+          "name": "contactPhone",
+          "onChange": [Function],
+          "placeholder": "Elder Contact Phone",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Submit",
+          "className": "signup-submit-btn",
+          "disabled": true,
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Submit",
+        "type": "button",
+      },
+    ],
+    "type": "form",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
-        "children": [Function],
+        "children": Array [
+          <input
+            className="signup-first-name signup-input"
+            name="firstName"
+            onChange={[Function]}
+            placeholder="First Name"
+            value=""
+/>,
+          <input
+            className="signup-last-name signup-input"
+            name="lastName"
+            onChange={[Function]}
+            placeholder="Last Name"
+            value=""
+/>,
+          <input
+            className="signup-email-address signup-input"
+            name="email"
+            onChange={[Function]}
+            placeholder="Email Address"
+            value=""
+/>,
+          <input
+            className="signup-password signup-input"
+            name="password"
+            onChange={[Function]}
+            placeholder="Password"
+            value=""
+/>,
+          <section
+            className="signup-phone-section"
+>
+            <input
+                        className="signup-phoneNumber signup-input"
+                        name="phoneNumber"
+                        onChange={[Function]}
+                        placeholder="Phone Number"
+                        style={
+                                    Object {
+                                                "marginLeft": "0px",
+                                              }
+                        }
+                        value=""
+            />
+            <button
+                        className="phone-test-btn"
+                        isDisabled={true}
+                        onClick={[Function]}
+            >
+                        Test
+            </button>
+</section>,
+          <input
+            className="signup-elder-name signup-input"
+            name="contactName"
+            onChange={[Function]}
+            placeholder="Elder Contact Name"
+            value=""
+/>,
+          <input
+            className="signup-elder-phone signup-input"
+            name="contactPhone"
+            onChange={[Function]}
+            placeholder="Elder Contact Phone"
+            value=""
+/>,
+          <button
+            className="signup-submit-btn"
+            disabled={true}
+            onClick={[Function]}
+>
+            Submit
+</button>,
+        ],
+        "className": "signup-form",
       },
       "ref": null,
-      "rendered": [Function],
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "signup-first-name signup-input",
+            "name": "firstName",
+            "onChange": [Function],
+            "placeholder": "First Name",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "signup-last-name signup-input",
+            "name": "lastName",
+            "onChange": [Function],
+            "placeholder": "Last Name",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "signup-email-address signup-input",
+            "name": "email",
+            "onChange": [Function],
+            "placeholder": "Email Address",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "signup-password signup-input",
+            "name": "password",
+            "onChange": [Function],
+            "placeholder": "Password",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <input
+                className="signup-phoneNumber signup-input"
+                name="phoneNumber"
+                onChange={[Function]}
+                placeholder="Phone Number"
+                style={
+                                Object {
+                                                "marginLeft": "0px",
+                                              }
+                }
+                value=""
+/>,
+              <button
+                className="phone-test-btn"
+                isDisabled={true}
+                onClick={[Function]}
+>
+                Test
+</button>,
+            ],
+            "className": "signup-phone-section",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "signup-phoneNumber signup-input",
+                "name": "phoneNumber",
+                "onChange": [Function],
+                "placeholder": "Phone Number",
+                "style": Object {
+                  "marginLeft": "0px",
+                },
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Test",
+                "className": "phone-test-btn",
+                "isDisabled": true,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Test",
+              "type": "button",
+            },
+          ],
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "signup-elder-name signup-input",
+            "name": "contactName",
+            "onChange": [Function],
+            "placeholder": "Elder Contact Name",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "signup-elder-phone signup-input",
+            "name": "contactPhone",
+            "onChange": [Function],
+            "placeholder": "Elder Contact Phone",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Submit",
+            "className": "signup-submit-btn",
+            "disabled": true,
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Submit",
+          "type": "button",
+        },
+      ],
+      "type": "form",
     },
   ],
   Symbol(enzyme.__options__): Object {

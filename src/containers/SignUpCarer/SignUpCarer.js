@@ -144,7 +144,7 @@ export class SignUpCarer extends Component {
 
 SignUpCarer.propTypes = {
   currentUser: PropTypes.object,
-  setCurrentUser: PropTypes.func.isRequired,
+  setCurrentUser: PropTypes.func,
   history: PropTypes.object
 };
 
