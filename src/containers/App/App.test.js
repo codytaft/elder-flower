@@ -8,4 +8,16 @@ describe('App', () => {
     wrapper = shallow(<App />);
     expect(wrapper).toMatchSnapshot();
   });
+  it('should match the snapshot if location.pathname equals sign-up-elder', () => {
+    let wrapper;
+    const mockLocation = { pathname: '/sign-up-elder' };
+    wrapper = shallow(<App location={mockLocation} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+  it('should match the snapshot if location.pathname does not equal sign-up-elder', () => {
+    let wrapper;
+    const mockLocation = { pathname: '/' };
+    wrapper = shallow(<App location={mockLocation} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
