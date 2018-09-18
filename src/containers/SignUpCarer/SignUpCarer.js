@@ -4,10 +4,7 @@ import { connect } from 'react-redux';
 import bcrypt from 'bcryptjs';
 import { setCurrentUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
-import {
-  createUser,
-  testCarerResponsePhoneNumber
-} from '../../helpers/fetchCalls';
+import { createUser, testResponsePhoneNumber } from '../../helpers/fetchCalls';
 
 import './SignUpCarer.css';
 
@@ -50,7 +47,7 @@ export class SignUpCarer extends Component {
       /[- ._]/g,
       ''
     )}`;
-    testCarerResponsePhoneNumber(cleanPhoneNumber, this.state.firstName);
+    testResponsePhoneNumber(cleanPhoneNumber, this.state.firstName);
   };
 
   render() {
