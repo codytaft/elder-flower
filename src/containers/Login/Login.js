@@ -27,7 +27,6 @@ export class Login extends Component {
     const { history } = this.props;
     const { email, password } = this.state;
     const user = await getUser(email, password);
-    console.log(user);
     const comparePassword = await bcrypt.compareSync(
       password,
       user[0].password
