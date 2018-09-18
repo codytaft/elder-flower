@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
 import { Navigation } from '../Navigation/Navigation';
-import MainContainer from '../MainContainer/MainContainer';
+import MainContainer from '../../components/MainContainer/MainContainer';
 import { connect } from 'react-redux';
 import { setCurrentUser } from '../../actions';
 import Header from '../Header/Header';
@@ -20,7 +20,7 @@ export class Dashboard extends Component {
 }
 
 Dashboard.propTypes = {
-  setCurrentUser: PropTypes.func.isRequired,
+  setCurrentUser: PropTypes.func,
   currentUser: PropTypes.object
 };
 
