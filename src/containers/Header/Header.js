@@ -12,7 +12,7 @@ export class Header extends Component {
     history.replace('/');
   };
   render() {
-    const { currentUser, location } = this.props;
+    const { currentUser } = this.props;
     return (
       <section className="main-header-section">
         {currentUser ? (
@@ -38,8 +38,8 @@ export class Header extends Component {
 }
 
 Header.propTypes = {
-  history: PropTypes.object.isRequired,
-  setCurrentUser: PropTypes.func.isRequired,
+  history: PropTypes.object,
+  setCurrentUser: PropTypes.func,
   currentUser: PropTypes.object,
   location: PropTypes.object
 };
