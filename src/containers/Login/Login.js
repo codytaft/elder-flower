@@ -23,21 +23,24 @@ export class Login extends Component {
 
   handleSubmit = async e => {
     e.preventDefault();
+    let comparePassword;
     const salt = bcrypt.genSaltSync(10);
     const { history } = this.props;
     const { email, password } = this.state;
     const user = await getUser(email, password);
-    const comparePassword = await bcrypt.compareSync(
-      password,
-      user[0].password
-    );
+    if (user.password) {
+      comparePassword = await bcrypt.compareSync(password, user[0].password);
+    }
     if (comparePassword) {
       this.props.setCurrentUser(user[0]);
+      const location = { pathname: './dashboard' };
+      history.push(location);
     } else {
       alert('User Not Found');
+      const location = { pathname: './login' };
+      history.push(location);
+      this.setState({ email: '', password: '' });
     }
-    const location = { pathname: './dashboard' };
-    history.push(location);
   };
 
   render() {
