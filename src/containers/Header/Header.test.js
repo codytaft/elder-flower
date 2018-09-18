@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Header, mapStateToProps, mapDispatchToProps } from './Header';
 import { setCurrentUser } from '../../actions';
-import { Iot } from 'aws-sdk';
 
 describe('Header', () => {
   let wrapper;
