@@ -44,3 +44,17 @@ export const sendSOS = async (contactPhone, contactName) => {
     }
   });
 };
+
+export const textQuestion = async (contactPhone, contactName, question) => {
+  await fetch(`http://localhost:3000/api/sendMessage`, {
+    method: 'POST',
+    body: JSON.stringify({
+      name: contactName,
+      to: contactPhone,
+      body: `Hi ${contactName}. ${question}`
+    }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+};
