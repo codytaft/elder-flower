@@ -12,7 +12,8 @@ export class Login extends Component {
     super();
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      error: false
     };
   }
 
@@ -24,11 +25,11 @@ export class Login extends Component {
   handleSubmit = async e => {
     e.preventDefault();
     let comparePassword;
-    const salt = bcrypt.genSaltSync(10);
+    // const salt = bcrypt.genSaltSync(10);
     const { history } = this.props;
     const { email, password } = this.state;
     const user = await getUser(email, password);
-    if (user.password) {
+    if (user.length) {
       comparePassword = await bcrypt.compareSync(password, user[0].password);
     }
     if (comparePassword) {
@@ -36,21 +37,22 @@ export class Login extends Component {
       const location = { pathname: './dashboard' };
       history.push(location);
     } else {
-      alert('User Not Found');
       const location = { pathname: './login' };
       history.push(location);
-      this.setState({ email: '', password: '' });
+      this.setState({ email: '', password: '', error: true });
     }
   };
 
   render() {
+    const { email, password } = this.state;
+    const isEnabled = email.length > 0 && password.length > 0;
     return (
       <form onSubmit={this.handleSubmit} className="login-form">
         <input
           onChange={this.handleChange}
           type="text"
           className="login-email-input login-input"
-          value={this.state.email}
+          value={email}
           name="email"
           placeholder="Email Address"
         />
@@ -58,18 +60,20 @@ export class Login extends Component {
           onChange={this.handleChange}
           type="text"
           className="login-password-input login-input"
-          value={this.state.password}
+          value={password}
           name="password"
           placeholder="Password"
         />
-        <button className="login-submit-button">Submit</button>
+        <button disabled={!isEnabled} className="login-submit-button">
+          Submit
+        </button>
       </form>
     );
   }
 }
 
 Login.propTypes = {
-  setCurrentUser: PropTypes.func.isRequired,
+  setCurrentUser: PropTypes.func,
   currentUser: PropTypes.object,
   history: PropTypes.object
 };
