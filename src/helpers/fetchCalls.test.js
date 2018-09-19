@@ -1,4 +1,9 @@
-import { testResponsePhoneNumber, createUser, getUser } from './fetchCalls.js';
+import {
+  testResponsePhoneNumber,
+  createUser,
+  getUser,
+  sendSOS
+} from './fetchCalls.js';
 
 describe('fetch call component', () => {
   let mockUser;
@@ -71,6 +76,35 @@ describe('fetch call component', () => {
       );
       await getUser(email);
       expect(window.fetch).toHaveBeenCalledWith(mockFetch);
+    });
+  });
+
+  describe('sendSOS', () => {
+    it('should call fetch with the correct params', async () => {
+      const contactName = 'cody';
+      const contactPhone = '19038511575';
+      const url = `http://localhost:3000/api/sendMessage`;
+      const mockFetch = [
+        url,
+        {
+          method: 'POST',
+          body: JSON.stringify({
+            name: contactName,
+            to: contactPhone,
+            body: `Help me ${contactName}. You're my only hope`
+          }),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      ];
+      window.fetch = jest.fn().mockImplementation(() =>
+        Promise.resolve({
+          json: () => Promise.resolve(mockFetch)
+        })
+      );
+      await sendSOS(contactPhone, contactName);
+      expect(window.fetch).toHaveBeenCalledWith(...mockFetch);
     });
   });
 });

@@ -30,3 +30,17 @@ export const getUser = async email => {
     console.log(error);
   }
 };
+
+export const sendSOS = async (contactPhone, contactName) => {
+  const res = await fetch(`http://localhost:3000/api/sendMessage`, {
+    method: 'POST',
+    body: JSON.stringify({
+      name: contactName,
+      to: contactPhone,
+      body: `Help me ${contactName}. You're my only hope`
+    }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+};
