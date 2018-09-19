@@ -15,10 +15,9 @@ export class Contacts extends Component {
             <h1>Your Carer Name: {currentUser.contactName}</h1>
             <h1>Your Carer Phone Number: {currentUser.contactPhone}</h1>
             <button
-              onClick={sendSOS(
-                currentUser.contactPhone,
-                currentUser.contactName
-              )}
+              onClick={() =>
+                sendSOS(currentUser.contactPhone, currentUser.contactName)
+              }
               className="sos-btn"
             >
               Send SOS Message
@@ -27,7 +26,7 @@ export class Contacts extends Component {
         ) : (
           <div>
             <h1>Please Login</h1>
-            <NavLink exact to="/login" className="side-nav-link nav-link">
+            <NavLink exact to="/login" className="top-nav-link nav-link">
               Login
             </NavLink>
           </div>

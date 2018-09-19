@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contacts should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Contacts
+    currentUser={
+        Object {
+            "contactName": "Gaynell",
+            "contactPhone": "+17203304593",
+            "email": "cody.taft@gmail.com",
+            "firstName": "Cody",
+            "id": 75,
+            "isElder": false,
+            "lastName": "Taft",
+            "password": "123",
+            "phoneNumber": "+19038511575",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div>
+        <h1>
+                Your Carer Name: 
+                Gaynell
+        </h1>
+        <h1>
+                Your Carer Phone Number: 
+                +17203304593
+        </h1>
+        <button
+                className="sos-btn"
+                onClick={Promise {}}
+        >
+                Send SOS Message
+        </button>
+</div>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Your Carer Name: 
+            Gaynell
+</h1>,
+          <h1>
+            Your Carer Phone Number: 
+            +17203304593
+</h1>,
+          <button
+            className="sos-btn"
+            onClick={Promise {}}
+>
+            Send SOS Message
+</button>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Your Carer Name: ",
+              "Gaynell",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Your Carer Name: ",
+            "Gaynell",
+          ],
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Your Carer Phone Number: ",
+              "+17203304593",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Your Carer Phone Number: ",
+            "+17203304593",
+          ],
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Send SOS Message",
+            "className": "sos-btn",
+            "onClick": Promise {},
+          },
+          "ref": null,
+          "rendered": "Send SOS Message",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div>
+          <h1>
+                    Your Carer Name: 
+                    Gaynell
+          </h1>
+          <h1>
+                    Your Carer Phone Number: 
+                    +17203304593
+          </h1>
+          <button
+                    className="sos-btn"
+                    onClick={Promise {}}
+          >
+                    Send SOS Message
+          </button>
+</div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1>
+              Your Carer Name: 
+              Gaynell
+</h1>,
+            <h1>
+              Your Carer Phone Number: 
+              +17203304593
+</h1>,
+            <button
+              className="sos-btn"
+              onClick={Promise {}}
+>
+              Send SOS Message
+</button>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Your Carer Name: ",
+                "Gaynell",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Your Carer Name: ",
+              "Gaynell",
+            ],
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Your Carer Phone Number: ",
+                "+17203304593",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Your Carer Phone Number: ",
+              "+17203304593",
+            ],
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Send SOS Message",
+              "className": "sos-btn",
+              "onClick": Promise {},
+            },
+            "ref": null,
+            "rendered": "Send SOS Message",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
