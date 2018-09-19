@@ -23,6 +23,10 @@ export const createUser = async user => {
 };
 
 export const getUser = async email => {
-  const response = await fetch(`http://localhost:3000/api/v1/users/${email}`);
-  return response.json();
+  try {
+    const response = await fetch(`http://localhost:3000/api/v1/users/${email}`);
+    return response.json();
+  } catch (error) {
+    console.log(error);
+  }
 };
