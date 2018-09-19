@@ -7,7 +7,7 @@ import MainContainer from '../../components/MainContainer/MainContainer';
 
 import './App.css';
 
-class App extends Component {
+export class App extends Component {
   render() {
     const { location } = this.props;
     return (
