@@ -1,11 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import { App } from './App';
 
 describe('App', () => {
   it('should match the snapshot', () => {
     let wrapper;
-    wrapper = shallow(<App />);
+    const mockLocation = {
+      pathname: '/sign-up-elder',
+      search: '',
+      hash: ''
+    };
+    wrapper = shallow(<App location={mockLocation} />);
     expect(wrapper).toMatchSnapshot();
   });
   it('should match the snapshot if location.pathname equals sign-up-elder', () => {

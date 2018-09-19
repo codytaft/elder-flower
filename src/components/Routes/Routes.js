@@ -4,7 +4,7 @@ import Login from '../../containers/Login/Login';
 import { SignUpHome } from '../../components/SignUpHome/SignUpHome';
 import SignUpElder from '../../containers/SignUpElder/SignUpElder';
 import SignUpCarer from '../../containers/SignUpCarer/SignUpCarer';
-import Emergency from '../../containers/Emergency/Emergency';
+import Contacts from '../../containers/Contacts/Contacts';
 import Dashboard from '../../containers/Dashboard/Dashboard';
 
 export const Routes = () => {
@@ -17,13 +17,7 @@ export const Routes = () => {
       <Route exact path="/sign-up-elder" component={SignUpElder} />
       <Route exact path="/sign-up-carer" component={SignUpCarer} />
       <Route exact path="/dashboard" component={Dashboard} />
-      <Route
-        exact
-        path="/emergency"
-        render={() => {
-          return <Emergency />;
-        }}
-      />
+      <Route exact path="/contacts" component={Contacts} />
     </Switch>
   );
 };

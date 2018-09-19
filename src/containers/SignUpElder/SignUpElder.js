@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import bcrypt from 'bcryptjs';
 import { setCurrentUser } from '../../actions';
 import { withRouter } from 'react-router-dom';
-import { createUser, testPhoneNumber } from '../../helpers/fetchCalls';
+import { createUser, testResponsePhoneNumber } from '../../helpers/fetchCalls';
 import './SignUpElder.css';
 
 export class SignUpElder extends Component {
@@ -32,7 +32,7 @@ export class SignUpElder extends Component {
     const phoneNumber = `+1${this.state.phoneNumber.replace(/[- ._]/g, '')}`;
     const contactPhone = `+1${this.state.contactPhone.replace(/[- ._]/g, '')}`;
     const salt = bcrypt.genSaltSync(10);
-    const hash = bcrypt.hashSync('hello', salt);
+    const hash = bcrypt.hashSync(this.state.password, salt);
     await this.setState({ phoneNumber, contactPhone, password: hash });
     const user = this.state;
     this.props.setCurrentUser(this.state);
@@ -47,7 +47,7 @@ export class SignUpElder extends Component {
       /[- ._]/g,
       ''
     )}`;
-    testPhoneNumber(cleanPhoneNumber);
+    testResponsePhoneNumber(cleanPhoneNumber, this.state.firstName);
   };
 
   render() {
@@ -143,7 +143,7 @@ export class SignUpElder extends Component {
 }
 
 SignUpElder.propTypes = {
-  setCurrentUser: PropTypes.func.isRequired,
+  setCurrentUser: PropTypes.func,
   currentUser: PropTypes.object,
   history: PropTypes.object
 };

@@ -6,15 +6,8 @@ import './Navigation.css';
 export const Navigation = () => {
   return (
     <header className="nav-link-bar">
-      <NavLink exact to="/contacts" className="side-nav-link nav-link-contacts">
+      <NavLink exact to="/contacts" className="top-nav-link">
         Contacts
-      </NavLink>
-      <NavLink
-        exact
-        to="/emergency"
-        className="side-nav-link nav-link-emergency"
-      >
-        Emergency
       </NavLink>
     </header>
   );

@@ -16,7 +16,7 @@ export class Header extends Component {
     return (
       <section className="main-header-section">
         {currentUser ? (
-          <h1 className="main-header-title">Hello {currentUser.name}</h1>
+          <h1 className="main-header-title">Hello {currentUser.firstName}</h1>
         ) : (
           <h1 className="main-header-title">Welcome to Elder Flower </h1>
         )}

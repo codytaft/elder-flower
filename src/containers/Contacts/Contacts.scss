@@ -1,0 +1,26 @@
+.sos-btn {
+  margin: 2rem auto 2rem auto;
+  text-decoration: none;
+  justify-content: center;
+  padding: 2rem;
+  border: 0.2rem solid rgb(78, 45, 29);
+  color: #453d30;
+  border-radius: 5rem;
+  cursor: pointer;
+  width: 30rem;
+  background: #eacda3;
+  font-size: 32px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.sos-btn:focus {
+  outline: none;
+}
+
+.sos-btn:hover {
+  background-color: #c3fcf2;
+}
+
+.sos-btn-hidden {
+  display: none;
+}

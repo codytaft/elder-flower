@@ -1,14 +1,56 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Login from './Login';
 import { setCurrentUser } from '../../actions';
-import { mapStateToProps, mapDispatchToProps } from './Login';
+import { Login, mapStateToProps, mapDispatchToProps } from './Login';
+import bcrypt from 'bcryptjs';
+
+jest.mock('bcryptjs', () => ({
+  genSaltSync: () => 'sdkfj',
+  hashSync: () => 'yournewhash',
+  compareSync: () => true
+}));
 
 describe('Login', () => {
+  let wrapper;
   it('should match the snapshot', () => {
-    let wrapper;
     wrapper = shallow(<Login />);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should update state on change', () => {
+    wrapper = shallow(<Login />);
+
+    const mockEmailEvent = {
+      target: { name: 'email', value: 'cody.taft@gmail.com' }
+    };
+    const mockPasswordEvent = {
+      target: { name: 'password', value: '123' }
+    };
+
+    wrapper.instance().handleChange(mockEmailEvent);
+    expect(wrapper.state('email')).toEqual(mockEmailEvent.target.value);
+    wrapper.instance().handleChange(mockPasswordEvent);
+    expect(wrapper.state('password')).toEqual(mockPasswordEvent.target.value);
+  });
+
+  it.skip('should get user on submit', async () => {
+    let mockEvent = { preventDefault: () => jest.fn() };
+
+    const email = 'cody.taft@gmail.com';
+    const password = '123';
+
+    await bcrypt.compareSync();
+
+    await wrapper.setState({ email, password });
+    await wrapper.instance().handleSubmit(mockEvent);
+
+    window.fetch = jest.fn().mockImplementation(() =>
+      Promise.resolve({
+        json: () => Promise.resolve(email, password)
+      })
+    );
+
+    wrapper = shallow(<Login />);
   });
 });
 

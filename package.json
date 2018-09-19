@@ -40,5 +40,16 @@
     "eslint": "^5.5.0",
     "eslint-plugin-react": "^7.11.1",
     "aws-sdk": "2.x"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/reducers/index.js",
+      "!src/setupTests.js",
+      "!src/registerServiceWorker.js",
+      "!src/Utilities/MockData.js",
+      "!src/api-key.js"
+    ]
   }
 }

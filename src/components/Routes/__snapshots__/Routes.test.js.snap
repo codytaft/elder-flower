@@ -49,9 +49,14 @@ ShallowWrapper {
           path="/sign-up-carer"
 />,
         <Route
+          component={[Function]}
           exact={true}
-          path="/emergency"
-          render={[Function]}
+          path="/dashboard"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/contacts"
 />,
       ],
     },
@@ -138,9 +143,22 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "component": [Function],
           "exact": true,
-          "path": "/emergency",
-          "render": [Function],
+          "path": "/dashboard",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/contacts",
         },
         "ref": null,
         "rendered": null,
@@ -185,9 +203,14 @@ ShallowWrapper {
             path="/sign-up-carer"
 />,
           <Route
+            component={[Function]}
             exact={true}
-            path="/emergency"
-            render={[Function]}
+            path="/dashboard"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/contacts"
 />,
         ],
       },
@@ -274,9 +297,22 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "component": [Function],
             "exact": true,
-            "path": "/emergency",
-            "render": [Function],
+            "path": "/dashboard",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/contacts",
           },
           "ref": null,
           "rendered": null,
@@ -357,9 +393,14 @@ ShallowWrapper {
           path="/sign-up-carer"
 />,
         <Route
+          component={[Function]}
           exact={true}
-          path="/emergency"
-          render={[Function]}
+          path="/dashboard"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/contacts"
 />,
       ],
     },
@@ -446,9 +487,22 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "component": [Function],
           "exact": true,
-          "path": "/emergency",
-          "render": [Function],
+          "path": "/dashboard",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/contacts",
         },
         "ref": null,
         "rendered": null,
@@ -493,9 +547,14 @@ ShallowWrapper {
             path="/sign-up-carer"
 />,
           <Route
+            component={[Function]}
             exact={true}
-            path="/emergency"
-            render={[Function]}
+            path="/dashboard"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/contacts"
 />,
         ],
       },
@@ -582,9 +641,22 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "component": [Function],
             "exact": true,
-            "path": "/emergency",
-            "render": [Function],
+            "path": "/dashboard",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/contacts",
           },
           "ref": null,
           "rendered": null,
@@ -666,9 +738,14 @@ ShallowWrapper {
           path="/sign-up-carer"
 />,
         <Route
+          component={[Function]}
           exact={true}
-          path="/emergency"
-          render={[Function]}
+          path="/dashboard"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/contacts"
 />,
       ],
     },
@@ -755,9 +832,22 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "component": [Function],
           "exact": true,
-          "path": "/emergency",
-          "render": [Function],
+          "path": "/dashboard",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/contacts",
         },
         "ref": null,
         "rendered": null,
@@ -802,9 +892,14 @@ ShallowWrapper {
             path="/sign-up-carer"
 />,
           <Route
+            component={[Function]}
             exact={true}
-            path="/emergency"
-            render={[Function]}
+            path="/dashboard"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/contacts"
 />,
         ],
       },
@@ -891,9 +986,22 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "component": [Function],
             "exact": true,
-            "path": "/emergency",
-            "render": [Function],
+            "path": "/dashboard",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/contacts",
           },
           "ref": null,
           "rendered": null,
@@ -975,9 +1083,14 @@ ShallowWrapper {
           path="/sign-up-carer"
 />,
         <Route
+          component={[Function]}
           exact={true}
-          path="/emergency"
-          render={[Function]}
+          path="/dashboard"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/contacts"
 />,
       ],
     },
@@ -1064,9 +1177,22 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "component": [Function],
           "exact": true,
-          "path": "/emergency",
-          "render": [Function],
+          "path": "/dashboard",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/contacts",
         },
         "ref": null,
         "rendered": null,
@@ -1111,9 +1237,14 @@ ShallowWrapper {
             path="/sign-up-carer"
 />,
           <Route
+            component={[Function]}
             exact={true}
-            path="/emergency"
-            render={[Function]}
+            path="/dashboard"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/contacts"
 />,
         ],
       },
@@ -1200,9 +1331,22 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "component": [Function],
             "exact": true,
-            "path": "/emergency",
-            "render": [Function],
+            "path": "/dashboard",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/contacts",
           },
           "ref": null,
           "rendered": null,
@@ -1284,9 +1428,14 @@ ShallowWrapper {
           path="/sign-up-carer"
 />,
         <Route
+          component={[Function]}
           exact={true}
-          path="/emergency"
-          render={[Function]}
+          path="/dashboard"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/contacts"
 />,
       ],
     },
@@ -1373,9 +1522,22 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "component": [Function],
           "exact": true,
-          "path": "/emergency",
-          "render": [Function],
+          "path": "/dashboard",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/contacts",
         },
         "ref": null,
         "rendered": null,
@@ -1420,9 +1582,14 @@ ShallowWrapper {
             path="/sign-up-carer"
 />,
           <Route
+            component={[Function]}
             exact={true}
-            path="/emergency"
-            render={[Function]}
+            path="/dashboard"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/contacts"
 />,
         ],
       },
@@ -1509,9 +1676,22 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "component": [Function],
             "exact": true,
-            "path": "/emergency",
-            "render": [Function],
+            "path": "/dashboard",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/contacts",
           },
           "ref": null,
           "rendered": null,
@@ -1547,7 +1727,7 @@ exports[`Routes should match snapshot of signup Route 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Unknown
-    component={undefined}
+    component={[Function]}
     path="/signup"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -1593,9 +1773,14 @@ ShallowWrapper {
           path="/sign-up-carer"
 />,
         <Route
+          component={[Function]}
           exact={true}
-          path="/emergency"
-          render={[Function]}
+          path="/dashboard"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/contacts"
 />,
       ],
     },
@@ -1682,9 +1867,22 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "component": [Function],
           "exact": true,
-          "path": "/emergency",
-          "render": [Function],
+          "path": "/dashboard",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/contacts",
         },
         "ref": null,
         "rendered": null,
@@ -1729,9 +1927,14 @@ ShallowWrapper {
             path="/sign-up-carer"
 />,
           <Route
+            component={[Function]}
             exact={true}
-            path="/emergency"
-            render={[Function]}
+            path="/dashboard"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/contacts"
 />,
         ],
       },
@@ -1818,9 +2021,22 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "component": [Function],
             "exact": true,
-            "path": "/emergency",
-            "render": [Function],
+            "path": "/dashboard",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/contacts",
           },
           "ref": null,
           "rendered": null,

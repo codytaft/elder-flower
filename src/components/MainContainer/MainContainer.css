@@ -6,25 +6,22 @@
   font-size: 40px;
   font-family: 'Nunito', sans-serif;
   color: #453d30;
-  height: 100%;
-}
+  height: 100%; }
 
 .nav-link {
   margin: 2rem auto 2rem auto;
   text-decoration: none;
+  justify-content: center;
   padding: 2rem;
   border: 0.2rem solid #4e2d1d;
   color: #453d30;
   border-radius: 5rem;
   cursor: pointer;
   width: 20rem;
-  background: #eacda3;
-}
+  background: #eacda3; }
 
 .nav-link:hover {
-  background-color: #c3fcf2;
-}
+  background-color: #c3fcf2; }
 
 .nav-link-hidden {
-  display: none;
-}
+  display: none; }

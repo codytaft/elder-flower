@@ -1,13 +1,12 @@
 .nav-link-bar {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0;
-  margin: 1rem 0 0 0;
   width: 100%;
 }
 
-.side-nav-link {
+.top-nav-link {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -21,7 +20,7 @@
   border: 0.1rem solid rgb(78, 45, 29);
 }
 
-.side-nav-link:hover {
+.top-nav-link:hover {
   background-color: rgba(215, 184, 141, 1);
 }
 

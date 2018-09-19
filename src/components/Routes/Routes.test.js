@@ -2,16 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Routes } from './Routes';
 import { Login } from '../../containers/Login/Login';
-import SignUpHome from '../../components/SignUpHome/SignUpHome';
+import { SignUpHome } from '../../components/SignUpHome/SignUpHome';
 import { SignUpElder } from '../../containers/SignUpElder/SignUpElder';
 import { SignUpCarer } from '../../containers/SignUpCarer/SignUpCarer';
 
 describe('Routes', () => {
-  beforeEach(() => {
-    let wrapper;
-    wrapper = shallow(<Routes />);
-  });
-
   it('should match snapshot of login Route', () => {
     let loginWrapper = shallow(<Routes path="/login" component={Login} />);
     expect(loginWrapper).toMatchSnapshot();
