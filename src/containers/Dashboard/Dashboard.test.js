@@ -1,15 +1,31 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Dashboard from './Dashboard';
+import { Dashboard, mapStateToProps, mapDispatchToProps } from './Dashboard';
 import { setCurrentUser } from '../../actions';
-import { mapStateToProps, mapDispatchToProps } from './Dashboard';
 
 describe('Dashboard', () => {
-  it('should match the snapshot', () => {
+  it('should match the snapshot if pathname is dashboard', () => {
     let wrapper;
-    wrapper = shallow(<Dashboard />);
+    const mockLocation = {
+      pathname: '/dashboard',
+      search: '',
+      hash: ''
+    };
+
+    wrapper = shallow(<Dashboard location={mockLocation} />);
     expect(wrapper).toMatchSnapshot();
   });
+});
+it('should match the snapshot if pathname is not dashboard', () => {
+  let wrapper;
+  const mockLocation = {
+    pathname: '/',
+    search: '',
+    hash: ''
+  };
+
+  wrapper = shallow(<Dashboard location={mockLocation} />);
+  expect(wrapper).toMatchSnapshot();
 });
 
 describe('mapStateToProps', () => {
