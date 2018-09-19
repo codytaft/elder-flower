@@ -29,7 +29,10 @@ export class Login extends Component {
     const { email, password } = this.state;
     const user = await getUser(email, password);
     if (user.length) {
+      this.setState({ error: false });
       comparePassword = await bcrypt.compareSync(password, user[0].password);
+    } else {
+      this.setState({ error: true });
     }
     if (comparePassword) {
       this.props.setCurrentUser(user[0]);
@@ -63,6 +66,9 @@ export class Login extends Component {
           name="password"
           placeholder="Password"
         />
+        {this.state.error && (
+          <p className="error-text">User not found. Try again.</p>
+        )}
         <button disabled={!isEnabled} className="login-submit-button">
           Submit
         </button>
