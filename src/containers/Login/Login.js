@@ -25,7 +25,6 @@ export class Login extends Component {
   handleSubmit = async e => {
     e.preventDefault();
     let comparePassword;
-    // const salt = bcrypt.genSaltSync(10);
     const { history } = this.props;
     const { email, password } = this.state;
     const user = await getUser(email, password);

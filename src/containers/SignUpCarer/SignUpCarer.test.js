@@ -1,8 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { SignUpCarer } from './SignUpCarer';
 import { setCurrentUser } from '../../actions';
-import { mapStateToProps, mapDispatchToProps } from './SignUpCarer';
+import {
+  SignUpCarer,
+  mapStateToProps,
+  mapDispatchToProps
+} from './SignUpCarer';
 import bcrypt from 'bcryptjs';
 
 jest.mock('bcryptjs', () => ({
@@ -107,7 +110,6 @@ describe('handleSubmit', () => {
     let mockEvent = { preventDefault: () => jest.fn() };
     let phoneNumber = '+19038511575';
     let contactPhone = '+19038511575';
-    let salt = bcrypt.genSaltSync();
     let hash = bcrypt.hashSync();
     mockUser = {
       user: {

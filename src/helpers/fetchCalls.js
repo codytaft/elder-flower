@@ -1,5 +1,5 @@
 export const testResponsePhoneNumber = async (phoneNumber, firstName) => {
-  const res = await fetch(`http://localhost:3000/api/sendMessage`, {
+  await fetch(`http://localhost:3000/api/sendMessage`, {
     method: 'POST',
     body: JSON.stringify({
       name: firstName,
@@ -13,7 +13,7 @@ export const testResponsePhoneNumber = async (phoneNumber, firstName) => {
 };
 
 export const createUser = async user => {
-  const res = await fetch(`http://localhost:3000/api/v1/users/`, {
+  await fetch(`http://localhost:3000/api/v1/users/`, {
     method: 'POST',
     body: JSON.stringify({ user }),
     headers: {
@@ -27,12 +27,12 @@ export const getUser = async email => {
     const response = await fetch(`http://localhost:3000/api/v1/users/${email}`);
     return response.json();
   } catch (error) {
-    console.log(error);
+    alert(error);
   }
 };
 
 export const sendSOS = async (contactPhone, contactName) => {
-  const res = await fetch(`http://localhost:3000/api/sendMessage`, {
+  await fetch(`http://localhost:3000/api/sendMessage`, {
     method: 'POST',
     body: JSON.stringify({
       name: contactName,
