@@ -32,20 +32,33 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div>
-        <h1>
-                Your Carer Name: 
-                Gaynell
-        </h1>
-        <h1>
-                Your Carer Phone Number: 
-                +17203304593
-        </h1>
-        <button
-                className="sos-btn"
-                onClick={Promise {}}
-        >
-                Send SOS Message
-        </button>
+        <div>
+                <h1>
+                        Your Elder Name: 
+                        Gaynell
+                </h1>
+                <h1>
+                        Your Elder Phone Number: 
+                        +17203304593
+                </h1>
+                <form
+                        onSubmit={[Function]}
+                >
+                        <input
+                                className="question-input"
+                                name="question"
+                                onChange={[Function]}
+                                placeholder="Ask question"
+                                type="text"
+                                value=""
+                        />
+                        <button
+                                className="carer-question-submit"
+                        >
+                                Text Question
+                        </button>
+                </form>
+        </div>
 </div>,
     },
     "ref": null,
@@ -54,73 +67,162 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
+        "children": <div>
           <h1>
-            Your Carer Name: 
-            Gaynell
-</h1>,
+                    Your Elder Name: 
+                    Gaynell
+          </h1>
           <h1>
-            Your Carer Phone Number: 
-            +17203304593
-</h1>,
-          <button
-            className="sos-btn"
-            onClick={Promise {}}
->
-            Send SOS Message
-</button>,
-        ],
+                    Your Elder Phone Number: 
+                    +17203304593
+          </h1>
+          <form
+                    onSubmit={[Function]}
+          >
+                    <input
+                              className="question-input"
+                              name="question"
+                              onChange={[Function]}
+                              placeholder="Ask question"
+                              type="text"
+                              value=""
+                    />
+                    <button
+                              className="carer-question-submit"
+                    >
+                              Text Question
+                    </button>
+          </form>
+</div>,
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Your Carer Name: ",
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1>
+              Your Elder Name: 
+              Gaynell
+</h1>,
+            <h1>
+              Your Elder Phone Number: 
+              +17203304593
+</h1>,
+            <form
+              onSubmit={[Function]}
+>
+              <input
+                            className="question-input"
+                            name="question"
+                            onChange={[Function]}
+                            placeholder="Ask question"
+                            type="text"
+                            value=""
+              />
+              <button
+                            className="carer-question-submit"
+              >
+                            Text Question
+              </button>
+</form>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Your Elder Name: ",
+                "Gaynell",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Your Elder Name: ",
               "Gaynell",
             ],
+            "type": "h1",
           },
-          "ref": null,
-          "rendered": Array [
-            "Your Carer Name: ",
-            "Gaynell",
-          ],
-          "type": "h1",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Your Carer Phone Number: ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Your Elder Phone Number: ",
+                "+17203304593",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Your Elder Phone Number: ",
               "+17203304593",
             ],
+            "type": "h1",
           },
-          "ref": null,
-          "rendered": Array [
-            "Your Carer Phone Number: ",
-            "+17203304593",
-          ],
-          "type": "h1",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Send SOS Message",
-            "className": "sos-btn",
-            "onClick": Promise {},
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <input
+                  className="question-input"
+                  name="question"
+                  onChange={[Function]}
+                  placeholder="Ask question"
+                  type="text"
+                  value=""
+/>,
+                <button
+                  className="carer-question-submit"
+>
+                  Text Question
+</button>,
+              ],
+              "onSubmit": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "question-input",
+                  "name": "question",
+                  "onChange": [Function],
+                  "placeholder": "Ask question",
+                  "type": "text",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Text Question",
+                  "className": "carer-question-submit",
+                },
+                "ref": null,
+                "rendered": "Text Question",
+                "type": "button",
+              },
+            ],
+            "type": "form",
           },
-          "ref": null,
-          "rendered": "Send SOS Message",
-          "type": "button",
-        },
-      ],
+        ],
+        "type": "div",
+      },
       "type": "div",
     },
     "type": "div",
@@ -132,20 +234,33 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div>
-          <h1>
-                    Your Carer Name: 
-                    Gaynell
-          </h1>
-          <h1>
-                    Your Carer Phone Number: 
-                    +17203304593
-          </h1>
-          <button
-                    className="sos-btn"
-                    onClick={Promise {}}
-          >
-                    Send SOS Message
-          </button>
+          <div>
+                    <h1>
+                              Your Elder Name: 
+                              Gaynell
+                    </h1>
+                    <h1>
+                              Your Elder Phone Number: 
+                              +17203304593
+                    </h1>
+                    <form
+                              onSubmit={[Function]}
+                    >
+                              <input
+                                        className="question-input"
+                                        name="question"
+                                        onChange={[Function]}
+                                        placeholder="Ask question"
+                                        type="text"
+                                        value=""
+                              />
+                              <button
+                                        className="carer-question-submit"
+                              >
+                                        Text Question
+                              </button>
+                    </form>
+          </div>
 </div>,
       },
       "ref": null,
@@ -154,73 +269,162 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
+          "children": <div>
             <h1>
-              Your Carer Name: 
-              Gaynell
-</h1>,
+                        Your Elder Name: 
+                        Gaynell
+            </h1>
             <h1>
-              Your Carer Phone Number: 
-              +17203304593
-</h1>,
-            <button
-              className="sos-btn"
-              onClick={Promise {}}
->
-              Send SOS Message
-</button>,
-          ],
+                        Your Elder Phone Number: 
+                        +17203304593
+            </h1>
+            <form
+                        onSubmit={[Function]}
+            >
+                        <input
+                                    className="question-input"
+                                    name="question"
+                                    onChange={[Function]}
+                                    placeholder="Ask question"
+                                    type="text"
+                                    value=""
+                        />
+                        <button
+                                    className="carer-question-submit"
+                        >
+                                    Text Question
+                        </button>
+            </form>
+</div>,
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                "Your Carer Name: ",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1>
+                Your Elder Name: 
+                Gaynell
+</h1>,
+              <h1>
+                Your Elder Phone Number: 
+                +17203304593
+</h1>,
+              <form
+                onSubmit={[Function]}
+>
+                <input
+                                className="question-input"
+                                name="question"
+                                onChange={[Function]}
+                                placeholder="Ask question"
+                                type="text"
+                                value=""
+                />
+                <button
+                                className="carer-question-submit"
+                >
+                                Text Question
+                </button>
+</form>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Your Elder Name: ",
+                  "Gaynell",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Your Elder Name: ",
                 "Gaynell",
               ],
+              "type": "h1",
             },
-            "ref": null,
-            "rendered": Array [
-              "Your Carer Name: ",
-              "Gaynell",
-            ],
-            "type": "h1",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                "Your Carer Phone Number: ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Your Elder Phone Number: ",
+                  "+17203304593",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Your Elder Phone Number: ",
                 "+17203304593",
               ],
+              "type": "h1",
             },
-            "ref": null,
-            "rendered": Array [
-              "Your Carer Phone Number: ",
-              "+17203304593",
-            ],
-            "type": "h1",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Send SOS Message",
-              "className": "sos-btn",
-              "onClick": Promise {},
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <input
+                    className="question-input"
+                    name="question"
+                    onChange={[Function]}
+                    placeholder="Ask question"
+                    type="text"
+                    value=""
+/>,
+                  <button
+                    className="carer-question-submit"
+>
+                    Text Question
+</button>,
+                ],
+                "onSubmit": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "question-input",
+                    "name": "question",
+                    "onChange": [Function],
+                    "placeholder": "Ask question",
+                    "type": "text",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Text Question",
+                    "className": "carer-question-submit",
+                  },
+                  "ref": null,
+                  "rendered": "Text Question",
+                  "type": "button",
+                },
+              ],
+              "type": "form",
             },
-            "ref": null,
-            "rendered": "Send SOS Message",
-            "type": "button",
-          },
-        ],
+          ],
+          "type": "div",
+        },
         "type": "div",
       },
       "type": "div",
