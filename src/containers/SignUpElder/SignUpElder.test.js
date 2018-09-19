@@ -5,10 +5,10 @@ import { setCurrentUser } from '../../actions';
 import { mapStateToProps, mapDispatchToProps } from './SignUpElder';
 import bcrypt from 'bcryptjs';
 
-// jest.mock('bcryptjs', () => ({
-//   genSaltSync: () => 'sdkfj',
-//   hashSync: () => 'yournewhash'
-// }))
+jest.mock('bcryptjs', () => ({
+  genSaltSync: () => 'salt',
+  hashSync: () => 'yournewhash'
+}));
 
 describe('SignUpElder', () => {
   it('should match the snapshot', () => {
@@ -79,12 +79,6 @@ describe('handleSubmit', () => {
       <SignUpElder setCurrentUser={mockSetCurrentUser} history={mockHistory} />
     );
 
-    jest.mock('bcryptjs', () => ({
-      genSaltSync: () => '$2a$10$JXwg6dIjEjpnlbr10h7QJu',
-      hashSync: () =>
-        '$2a$10$chU1dcpWOawYUxvei4KhZOZebl9Y0Swx3fV0/GtDeYjz68bAFf9UG'
-    }));
-
     mockUser = {
       user: {
         firstName: 'Cody',
@@ -109,19 +103,32 @@ describe('handleSubmit', () => {
       isElder: false
     };
   });
-  it.skip('should set state with the correct phone numbers and password', async () => {
+  it('should set state with the correct phone numbers and password', async () => {
     let mockEvent = { preventDefault: () => jest.fn() };
     let phoneNumber = '+19038511575';
     let contactPhone = '+19038511575';
-
+    let salt = bcrypt.genSaltSync();
+    let hash = bcrypt.hashSync();
+    mockUser = {
+      user: {
+        firstName: 'Cody',
+        lastName: 'Taft',
+        phoneNumber: '+19038511575',
+        email: 'cody.taft@gmail.com',
+        password: hash,
+        contactName: 'Gaynell',
+        contactPhone: '+17203304593',
+        isElder: true
+      }
+    };
     wrapper.setState({
       firstName: 'Cody',
       lastName: 'Taft',
-      phoneNumber: '+19038511575',
+      phoneNumber: '9038511575',
       email: 'cody.taft@gmail.com',
-      password: '123',
+      password: hash,
       contactName: 'Gaynell',
-      contactPhone: '+17203304593'
+      contactPhone: '7203304593'
     });
 
     let mockResult = [
@@ -142,7 +149,7 @@ describe('handleSubmit', () => {
     );
 
     await wrapper.instance().handleSubmit(mockEvent);
-    await wrapper.setState({ phoneNumber, contactPhone });
+    await wrapper.setState({ phoneNumber, contactPhone, password: hash });
     expect(window.fetch).toHaveBeenCalledWith(...mockResult);
   });
 });
