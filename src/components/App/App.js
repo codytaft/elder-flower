@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Routes from '../../components/Routes/Routes';
-import Header from '../Header/Header';
+import Header from '../../containers/Header/Header';
 import MainContainer from '../../components/MainContainer/MainContainer';
 
 import './App.css';
