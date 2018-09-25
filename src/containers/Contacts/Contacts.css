@@ -34,17 +34,21 @@
   height: auto; }
 
 .carer-question-submit {
+  text-align: left;
   justify-content: center;
   padding: 1rem 1.5rem;
   border: 0.2rem solid #4e2d1d;
   color: #453d30;
   border-radius: 5rem;
   cursor: pointer;
-  width: 20rem;
+  width: auto;
   background: #eacda3;
   font-size: 32px;
   font-family: 'Nunito', sans-serif;
   height: auto; }
+
+.carer-question-submit:hover {
+  background: #c3fcf2; }
 
 .question-form {
   display: flex;
