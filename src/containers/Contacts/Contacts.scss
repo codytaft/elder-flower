@@ -27,7 +27,6 @@
 
 .question-input {
   margin: 1rem;
-
   // margin: 2rem auto 2rem auto;
   text-decoration: none;
   justify-content: center;
@@ -39,6 +38,9 @@
   font-size: 32px;
   font-family: 'Nunito', sans-serif;
   height: auto;
+}
+.question-input:focus {
+  outline: none;
 }
 
 .carer-question-submit {
@@ -59,6 +61,10 @@
 
 .carer-question-submit:hover {
   background: #c3fcf2;
+}
+
+.carer-question-submit:focus {
+  outline: none;
 }
 
 .question-form {

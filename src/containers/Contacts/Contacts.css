@@ -34,6 +34,9 @@
   font-family: 'Nunito', sans-serif;
   height: auto; }
 
+.question-input:focus {
+  outline: none; }
+
 .carer-question-submit {
   text-align: left;
   justify-content: center;
@@ -51,6 +54,9 @@
 
 .carer-question-submit:hover {
   background: #c3fcf2; }
+
+.carer-question-submit:focus {
+  outline: none; }
 
 .question-form {
   display: flex;
