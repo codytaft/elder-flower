@@ -22,6 +22,7 @@
   display: none; }
 
 .question-input {
+  margin: 1rem;
   text-decoration: none;
   justify-content: center;
   padding: 1rem 1.5rem;
@@ -36,6 +37,7 @@
 .carer-question-submit {
   text-align: left;
   justify-content: center;
+  margin: 1rem;
   padding: 1rem 1.5rem;
   border: 0.2rem solid #4e2d1d;
   color: #453d30;

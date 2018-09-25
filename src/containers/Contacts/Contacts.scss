@@ -26,6 +26,8 @@
 }
 
 .question-input {
+  margin: 1rem;
+
   // margin: 2rem auto 2rem auto;
   text-decoration: none;
   justify-content: center;
@@ -42,6 +44,7 @@
 .carer-question-submit {
   text-align: left;
   justify-content: center;
+  margin: 1rem;
   padding: 1rem 1.5rem;
   border: 0.2rem solid rgb(78, 45, 29);
   color: #453d30;
