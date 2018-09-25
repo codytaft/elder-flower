@@ -22,6 +22,7 @@ export class Dashboard extends Component {
             frameBorder="0"
             scrolling="no"
             className="dashboard-calendar"
+            title="google-calendar"
           />
         ) : (
           <div />

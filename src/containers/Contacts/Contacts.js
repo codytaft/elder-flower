@@ -50,7 +50,7 @@ export class Contacts extends Component {
               <div>
                 <h1>Your Elder Name: {currentUser.contactName}</h1>
                 <h1>Your Elder Phone Number: {currentUser.contactPhone}</h1>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} className="question-form">
                   <input
                     onChange={this.handleChange}
                     type="text"

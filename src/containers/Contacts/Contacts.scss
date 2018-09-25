@@ -24,3 +24,52 @@
 .sos-btn-hidden {
   display: none;
 }
+
+.question-input {
+  margin: 1rem;
+  // margin: 2rem auto 2rem auto;
+  text-decoration: none;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  border: 0.2rem solid rgb(78, 45, 29);
+  color: #453d30;
+  border-radius: 5rem;
+  width: 15rem;
+  font-size: 32px;
+  font-family: 'Nunito', sans-serif;
+  height: auto;
+}
+.question-input:focus {
+  outline: none;
+}
+
+.carer-question-submit {
+  text-align: left;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem 1.5rem;
+  border: 0.2rem solid rgb(78, 45, 29);
+  color: #453d30;
+  border-radius: 5rem;
+  cursor: pointer;
+  width: auto;
+  background: #eacda3;
+  font-size: 32px;
+  font-family: 'Nunito', sans-serif;
+  height: auto;
+}
+
+.carer-question-submit:hover {
+  background: #c3fcf2;
+}
+
+.carer-question-submit:focus {
+  outline: none;
+}
+
+.question-form {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
