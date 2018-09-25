@@ -7,7 +7,7 @@ ShallowWrapper {
     location={
         Object {
             "hash": "",
-            "pathname": "/sign-up-elder",
+            "pathname": "/",
             "search": "",
           }
     }

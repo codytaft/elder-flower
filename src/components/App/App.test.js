@@ -6,7 +6,7 @@ describe('App', () => {
   it('should match the snapshot', () => {
     let wrapper;
     const mockLocation = {
-      pathname: '/sign-up-elder',
+      pathname: '/',
       search: '',
       hash: ''
     };
